@@ -1,8 +1,10 @@
-import styled from "styled-components"
+import styled from "styled-components";
+import { motion } from "framer-motion";
 
-const LogoStyled  = styled.img`
+const LogoStyled = styled(motion.img)`
   width: 42px;
   height: 42px;
-  object-fit:contain;
-`
+  cursor: pointer;
+  object-fit: contain;
+`;
 export default LogoStyled;

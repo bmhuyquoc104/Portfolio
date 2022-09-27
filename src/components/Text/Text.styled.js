@@ -12,15 +12,15 @@ const StyledHeading3 = styled.h3``
 
 const LinkStyled = styled.a`
   font-family:var(--font_sans);
-  font-size:0.8125rem;
+  font-size: ${({ direction }) => (direction === "column" ? "1.25rem" : "0.8125rem")};
   font-weight:300;
-  color:${({theme}) => theme.text.color};
+  color:${({theme}) => theme.header.color};
   cursor:pointer;
 `
 
 const ButtonLinkStyled = styled.a`
   font-family:var(--font_sans);
-  font-size:0.8125rem;
+  font-size: ${({ direction }) => (direction === "column" ? "1.25rem" : "0.8125rem")};
   font-weight:300;
   color:var(--clr_primary_color);
   border-radius:4px;

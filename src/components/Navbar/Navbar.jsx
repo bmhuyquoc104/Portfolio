@@ -1,25 +1,37 @@
 import React from "react";
 import NavbarStyled from "./Navbar.styled";
 import Text from "../Text/Text";
+import {
+  listParentAnimation,
+  listChildrenAnimation,
+} from "../../style/AnimationStyled";
+import { motion } from "framer-motion";
 
-function Navbar() {
+function Navbar({ direction }) {
   return (
-    <NavbarStyled>
-      <ol>
-        <li>
-          <Text type="a" text="About" />
-        </li>
-        <li>
-          <Text type="a" text="Skills" />
-        </li>
-        <li>
-          <Text type="a" text="Projects" />
-        </li>
-        <li>
-          <Text type="a" text="Contact" />
-        </li>
-      </ol>
-          <Text type="button-link" text="Resume"/>
+    <NavbarStyled
+      variants={listParentAnimation}
+      animate="show"
+      initial="hidden"
+      direction={direction}
+    >
+      <motion.ol>
+        <motion.li variants={listChildrenAnimation}>
+          <Text direction={direction} type="a" text="About" />
+        </motion.li>
+        <motion.li variants={listChildrenAnimation}>
+          <Text direction={direction} type="a" text="Skills" />
+        </motion.li>
+        <motion.li variants={listChildrenAnimation}>
+          <Text direction={direction} type="a" text="Projects" />
+        </motion.li>
+        <motion.li variants={listChildrenAnimation}>
+          <Text direction={direction} type="a" text="Contact" />
+        </motion.li>
+      </motion.ol>
+      <motion.div variants={listChildrenAnimation}>
+        <Text direction={direction} type="button-link" text="Resume" />
+      </motion.div>
     </NavbarStyled>
   );
 }
