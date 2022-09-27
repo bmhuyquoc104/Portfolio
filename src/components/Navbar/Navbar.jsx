@@ -30,7 +30,7 @@ function Navbar({ direction }) {
         </motion.li>
       </motion.ol>
       <motion.div variants={listChildrenAnimation}>
-        <Text direction={direction} type="button-link" text="Resume" />
+        <Text direction={direction} size ="0.8125rem" type="button-link" text="Resume" />
       </motion.div>
     </NavbarStyled>
   );

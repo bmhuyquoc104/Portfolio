@@ -47,6 +47,22 @@ const listParentAnimation = {
   },
 };
 
+const homeAnimation = {
+  hidden: {
+    opacity: 0,
+  },
+  show: {
+    opacity: 1,
+    transition: {
+      delay:1.2,
+      type: "tween",
+      duration: 0.3,
+      when: "beforeChildren",
+      staggerChildren: 0.2,
+    },
+  },
+};
+
 const LogoAnimation = {
   hidden: {
     opacity: 0,
@@ -60,9 +76,24 @@ const LogoAnimation = {
   },
 };
 
+const SectionAnimation = {
+  hidden: {
+    opacity: 0,
+  },
+  show: {
+    opacity: 1,
+    transition: {
+      type: "easeIn",
+      delay: 1.25,
+    },
+  },
+};
+
 export {
   DropDownAnimation,
   listParentAnimation,
   listChildrenAnimation,
   LogoAnimation,
+  homeAnimation,
+  SectionAnimation,
 };

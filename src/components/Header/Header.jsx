@@ -7,10 +7,10 @@ import { IconStyled } from "../../style/ConstantStyled";
 import HamburgerHeader from "./HamburgerHeader/HamburgerHeader";
 import { AnimatePresence } from "framer-motion";
 
-function Header() {
+function Header({variants}) {
   const [isToggle, setIsToggle] = useState(false);
   return (
-    <HeaderStyled>
+    <HeaderStyled variants = {variants}>
       <Logo />
       <Navbar />
       <AiOutlineMenu style={IconStyled} onClick={() => setIsToggle(true)} />

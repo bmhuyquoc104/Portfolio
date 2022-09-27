@@ -1,5 +1,5 @@
 const IconStyled = {
-  color: "var(--clr_primary_color)",
+  color: "white",
   fontSize: "2rem",
   cursor: "pointer",
 };
