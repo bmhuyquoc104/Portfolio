@@ -13,7 +13,6 @@ import {
 
 function Text({ type, text, direction, size,variants }) {
   const textArr = text.split(" ");
-  console.log(textArr);
   if (type == "a") {
     return <LinkStyled direction={direction}>{text}</LinkStyled>;
   } else if (type == "button-link") {
@@ -30,7 +29,7 @@ function Text({ type, text, direction, size,variants }) {
             <div className="words" key={index}>
               {words.split("").map((char, index) => (
                 <motion.span
-                  whileHover={{ scale: 1.2, color: "var(--clr_primary_color" }}
+                  whileHover={{ scale: 1.2, color: "var(--clr_primary_color)" }}
                   transition={{
                     type: "spring",
                     stiffness: 300,

@@ -13,17 +13,20 @@ const GlobalStyled = createGlobalStyle`
     --font_sans: 'Open Sans', sans-serif;
     --font_playFair: 'Playfair Display', serif;
     // Neutral color for both mode
-    --clr_primary_color: #08fdd8;
+    --clr_primary_color: #f0a500;
 
     // Color for light mode
     --clr_background_color_light: #ffffff;
     --clr_header_color_light:#332909
     --clr_text_color_light:#776d4f;
+    --clr_navbar_bg_light:#181818;
 
     // Color for dark mode
     --clr_background_color_dark: #1d1d1d;
-    --clr_header_color_dark:#ccd6f6;
-    --clr_text_color_dark:#8892b0;
+    --clr_header_color_dark:#f4f4f4;
+    --clr_text_color_dark:#e3f6f5;
+    --clr_navbar_bg_dark:#181818;
+
 
   }
 

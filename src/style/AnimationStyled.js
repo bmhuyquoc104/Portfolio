@@ -54,7 +54,7 @@ const homeAnimation = {
   show: {
     opacity: 1,
     transition: {
-      delay:1.2,
+      delay: 1.2,
       type: "tween",
       duration: 0.3,
       when: "beforeChildren",
@@ -89,6 +89,19 @@ const SectionAnimation = {
   },
 };
 
+const SocialSectionAnimation = {
+  hidden: {
+    opacity: 0,
+  },
+  show: {
+    opacity: 1,
+    transition: {
+      type: "easeIn",
+      delay: 2.5,
+    },
+  },
+};
+
 export {
   DropDownAnimation,
   listParentAnimation,
@@ -96,4 +109,5 @@ export {
   LogoAnimation,
   homeAnimation,
   SectionAnimation,
+  SocialSectionAnimation,
 };
