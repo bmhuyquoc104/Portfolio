@@ -4,7 +4,7 @@ import { lightTheme, darkTheme } from "./style/Theme";
 import useTheme from "./hooks/useTheme";
 import Header from "./components/Header/Header";
 import SectionHome from "./components/SectionHome/SectionHome";
-
+import SocialContact from "./components/SocialContact/SocialContact";
 
 function App() {
   const [theme, themeToggler] = useTheme();
@@ -14,8 +14,9 @@ function App() {
   return (
     <ThemeProvider theme={themeMode}>
       <GlobalStyled />
-        <Header />
-        <SectionHome />
+      <Header />
+      <SectionHome />
+      <SocialContact/>
     </ThemeProvider>
   );
 }

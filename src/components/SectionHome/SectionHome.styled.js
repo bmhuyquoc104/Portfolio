@@ -22,9 +22,6 @@ const SectionHomeStyled = styled(motion.section)`
   @media (max-width: 768px) {
     width:100%;
     padding:3em 0 3em 0;
-    & > :nth-child(4) {
-      width: 85%;
-    }
   }
 `;
 
