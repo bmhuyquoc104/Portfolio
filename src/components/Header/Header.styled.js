@@ -7,9 +7,16 @@ const HeaderStyled = styled(motion.header)`
   align-items: center;
   width: 100%;
   position: fixed;
+  z-index: 2;
   top: 0;
   left: 0;
-  padding: 3em;
+  padding: 1em 3em;
+
+  &.active {
+    background-color: ${({ theme }) => theme.navbar.backgroundColor};
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5); 
+;
+  }
 
   & > :last-child {
     display: none;

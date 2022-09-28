@@ -46,12 +46,11 @@ function SectionAbout() {
           Problem-solver, autonomous worker, and high-detail oriented.
           Enthusiasm for soccer, history, TV shows, movies, and books. A
           third-year software engineering student who will graduate the
-          following year.
+          following year. Interested in working with other passion developers.
         </Text>
         <Text type="p">
           My main focus these days is building an accessible, scalable, great
-          UX/UI website with React and its ecosystem. I'm also experienced in
-          making mobile application for iOS and Android.
+          UX/UI website with React and its ecosystem.
         </Text>
       </FlexContainer>
       <Image>

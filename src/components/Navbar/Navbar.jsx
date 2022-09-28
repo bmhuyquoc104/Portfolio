@@ -1,5 +1,4 @@
 import { Link, animateScroll as scroll } from "react-scroll";
-import React from "react";
 import NavbarStyled from "./Navbar.styled";
 import Text from "../Text/Text";
 import {
@@ -9,6 +8,8 @@ import {
 import { motion } from "framer-motion";
 
 function Navbar({ direction }) {
+
+
   return (
     <NavbarStyled
       variants={listParentAnimation}
@@ -24,17 +25,17 @@ function Navbar({ direction }) {
         </motion.li>
         <motion.li variants={listChildrenAnimation}>
           <Link to="skills" smooth={true} offset={-70} duration={500}>
-              Skills
+            Skills
           </Link>
         </motion.li>
         <motion.li variants={listChildrenAnimation}>
           <Link to="projects" smooth={true} offset={-70} duration={500}>
-              Projects
+            Projects
           </Link>
         </motion.li>
         <motion.li variants={listChildrenAnimation}>
           <Link to="contact" smooth={true} offset={-70} duration={500}>
-              Contact
+            Contact
           </Link>
         </motion.li>
       </motion.ol>

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import HeaderStyled from "./Header.styled";
 import Navbar from "../Navbar/Navbar";
 import Logo from "../Logo/Logo";
@@ -7,10 +7,23 @@ import { IconStyled } from "../../style/ConstantStyled";
 import HamburgerHeader from "./HamburgerHeader/HamburgerHeader";
 import { AnimatePresence } from "framer-motion";
 
-function Header({variants}) {
+function Header({ variants }) {
+  const headerRef = useRef(null);
+  const changeBackground = () => {
+    if (window.scrollY >= 10) {
+      headerRef.current.classList.add("active");
+    } else {
+      headerRef.current.classList.remove("active");
+    }
+  };
+  useEffect(() => {
+    changeBackground();
+    // adding the event when scroll change background
+    window.addEventListener("scroll", changeBackground);
+  });
   const [isToggle, setIsToggle] = useState(false);
   return (
-    <HeaderStyled variants = {variants}>
+    <HeaderStyled ref={headerRef} variants={variants}>
       <Logo />
       <Navbar />
       <AiOutlineMenu style={IconStyled} onClick={() => setIsToggle(true)} />

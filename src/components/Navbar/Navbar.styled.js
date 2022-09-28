@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
-const NavbarStyled = styled(motion.div)`
+const NavbarStyled = styled(motion.nav)`
   display: flex;
   gap: 2em;
   align-items: center;
