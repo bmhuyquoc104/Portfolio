@@ -102,6 +102,19 @@ const SocialSectionAnimation = {
   },
 };
 
+const ImageAnimation = {
+  hidden: {
+    opacity: 0,
+  },
+  show: {
+    opacity: 1,
+    transition: {
+      type: "circIn",
+      duration:2,
+    },
+  },
+};
+
 const sectionAboutAnimation = {
   hidden: {
     opacity: 0,
@@ -109,7 +122,7 @@ const sectionAboutAnimation = {
   show: {
     opacity: 1,
     transition: {
-      type: "circleIn",
+      type: "easeIn",
       duration: 0.3,
       when: "beforeChildren",
       staggerChildren: 0.2,
@@ -129,7 +142,7 @@ const heading2Animation = {
   },
   hidden: {
     opacity: 0,
-    y:-25
+    y: -25,
   },
 };
 
@@ -143,4 +156,5 @@ export {
   SocialSectionAnimation,
   heading2Animation,
   sectionAboutAnimation,
+  ImageAnimation,
 };

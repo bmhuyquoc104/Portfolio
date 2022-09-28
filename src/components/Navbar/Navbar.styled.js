@@ -36,6 +36,15 @@ const NavbarStyled = styled(motion.div)`
     margin-right: ${({ direction }) =>
       direction === "column" ? "0" : "0.5rem"};
   }
+  ol li a {
+    font-family: var(--font_playFair);
+    font-size: ${({ direction }) =>
+      direction === "column" ? "1rem" : "0.8125rem"};
+    font-weight: 300;
+    color: ${({ theme }) => theme.header.color};
+    cursor: pointer;
+    text-decoration: none;
+  }
   ol li:hover {
     a {
       color: var(--clr_primary_color);

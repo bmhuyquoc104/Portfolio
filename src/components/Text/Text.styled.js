@@ -35,9 +35,8 @@ const Heading2Styled = styled(motion.h2)`
 const StyledHeading3 = styled.h3``;
 
 const LinkStyled = styled(motion.a)`
-  font-family: var(--font_sans);
-  font-size: ${({ direction }) =>
-    direction === "column" ? "1.25rem" : "0.8125rem"};
+  font-family: var(--font_playFair);
+  font-size: clamp(0.8rem, 0.76rem + 0.19999999999999996vw, 1rem);
   font-weight: 300;
   color: ${({ theme, color }) => (color == "" ? theme.header.color : color)};
   cursor: pointer;
@@ -60,9 +59,9 @@ const ButtonLinkStyled = styled(motion.a)`
 
 const ParagraphStyled = styled(motion.p)`
   font-family: var(--font_playFair);
-  font-size: clamp(0.85rem, 0.77rem + 0.4vw, 1.25rem);
+  font-size: clamp(0.8rem, 0.76rem + 0.19999999999999996vw, 1rem);
   line-height: 1.7em;
-  font-weight: 400;
+  font-weight: 300;
   color: ${({ theme }) => theme.text.color};
 `;
 

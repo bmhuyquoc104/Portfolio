@@ -19,23 +19,23 @@ function Navbar({ direction }) {
       <motion.ol>
         <motion.li variants={listChildrenAnimation}>
           <Link to="about" smooth={true} offset={-70} duration={500}>
-            <Text direction={direction} color="" type="a" text="About" />
+            About
           </Link>
         </motion.li>
         <motion.li variants={listChildrenAnimation}>
           <Link to="skills" smooth={true} offset={-70} duration={500}>
-            <Text direction={direction} color="" type="a" text="Skills" />
-          </Link>{" "}
+              Skills
+          </Link>
         </motion.li>
         <motion.li variants={listChildrenAnimation}>
           <Link to="projects" smooth={true} offset={-70} duration={500}>
-            <Text direction={direction} color="" type="a" text="Projects" />
-          </Link>{" "}
+              Projects
+          </Link>
         </motion.li>
         <motion.li variants={listChildrenAnimation}>
           <Link to="contact" smooth={true} offset={-70} duration={500}>
-            <Text direction={direction} color="" type="a" text="Contact" />
-          </Link>{" "}
+              Contact
+          </Link>
         </motion.li>
       </motion.ol>
       <motion.div variants={listChildrenAnimation}>

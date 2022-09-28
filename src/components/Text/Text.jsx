@@ -7,8 +7,16 @@ import {
 } from "./Text.styled";
 import { motion } from "framer-motion";
 
-function Text({ type, text, direction, size, variants, color, link }) {
-  const textArr = text.split(" ");
+function Text({
+  type,
+  text,
+  direction,
+  size,
+  variants,
+  color,
+  link,
+  children,
+}) {
   if (type == "a") {
     return (
       <LinkStyled
@@ -27,6 +35,8 @@ function Text({ type, text, direction, size, variants, color, link }) {
       </ButtonLinkStyled>
     );
   } else if (type == "h1") {
+    const textArr = text.split(" ");
+
     return (
       <Heading1Styled>
         {textArr.map(function (words, index) {
@@ -53,8 +63,10 @@ function Text({ type, text, direction, size, variants, color, link }) {
       </Heading1Styled>
     );
   } else if (type == "p") {
-    return <ParagraphStyled variants={variants}>{text}</ParagraphStyled>;
+    return <ParagraphStyled variants={variants}>{children}</ParagraphStyled>;
   } else if (type == "h2") {
+    const textArr = text.split(" ");
+
     return (
       <Heading2Styled color={color}>
         {textArr.map(function (words, index) {
