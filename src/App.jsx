@@ -5,6 +5,10 @@ import useTheme from "./hooks/useTheme";
 import Header from "./components/Header/Header";
 import SectionHome from "./components/SectionHome/SectionHome";
 import SocialContact from "./components/SocialContact/SocialContact";
+import SectionAbout from "./components/SectionAbout/SectionAbout";
+import SectionSkills from "./components/SectionSkills/SectionSkills";
+import SectionProjects from "./components/SectionProjects/SectionProjects";
+import SectionContact from "./components/SectionContact/SectionContact";
 
 function App() {
   const [theme, themeToggler] = useTheme();
@@ -16,7 +20,11 @@ function App() {
       <GlobalStyled />
       <Header />
       <SectionHome />
-      <SocialContact/>
+      <SocialContact />
+      <SectionAbout/>
+      <SectionSkills/>
+      <SectionProjects/>
+      <SectionContact/>
     </ThemeProvider>
   );
 }

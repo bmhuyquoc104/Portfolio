@@ -33,11 +33,14 @@ const GlobalStyled = createGlobalStyle`
   #root{
     display: flex;
     justify-content:center;
+    flex-direction:column;
     align-items:center;
     background-color:${({ theme }) => theme.body.backgroundColor};
     width: 100%;
-    min-height: 100vh;
-    padding:3em;
+    min-height:100vh;
+    padding:0 3em;
+    scroll-behavior: smooth;
+
   }
 
 `;

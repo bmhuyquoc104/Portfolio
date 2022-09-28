@@ -4,9 +4,11 @@ import { motion } from "framer-motion";
 const SectionHomeStyled = styled(motion.section)`
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 1em;
   padding: 3em 3em 1em 3em;
   width: 85%;
+  min-height:100vh;
   & > :nth-child(4) {
     width: 50%;
     margin-top:1em;

@@ -2,6 +2,7 @@ import React from "react";
 import SectionHomeStyled from "./SectionHome.styled";
 import {
   listChildrenAnimation,
+  heading2Animation,
   homeAnimation,
 } from "../../style/AnimationStyled";
 import Text from "../Text/Text";
@@ -13,10 +14,10 @@ function SectionHome() {
       animate="show"
       initial="hidden"
     >
-      <Text variants={listChildrenAnimation} type="h1" text="Hi," />
-      <Text variants={listChildrenAnimation} type="h1" text="I'm Huy." />
+      <Text variants={heading2Animation} type="h1" text="Hi," />
+      <Text variants={heading2Animation} type="h1" text="I'm Huy." />
       <Text
-        variants={listChildrenAnimation}
+        variants={heading2Animation}
         type="h1"
         text="Software Engineer."
       />

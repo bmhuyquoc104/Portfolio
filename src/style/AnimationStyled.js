@@ -58,7 +58,7 @@ const homeAnimation = {
       type: "tween",
       duration: 0.3,
       when: "beforeChildren",
-      staggerChildren: 0.2,
+      staggerChildren: 0.04,
     },
   },
 };
@@ -97,8 +97,39 @@ const SocialSectionAnimation = {
     opacity: 1,
     transition: {
       type: "easeIn",
-      delay: 2.5,
+      delay: 2.9,
     },
+  },
+};
+
+const sectionAboutAnimation = {
+  hidden: {
+    opacity: 0,
+  },
+  show: {
+    opacity: 1,
+    transition: {
+      type: "circleIn",
+      duration: 0.3,
+      when: "beforeChildren",
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const heading2Animation = {
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      when: "afterChildren",
+      staggerChildren: 0.2,
+    },
+  },
+  hidden: {
+    opacity: 0,
+    y:-25
   },
 };
 
@@ -110,4 +141,6 @@ export {
   homeAnimation,
   SectionAnimation,
   SocialSectionAnimation,
+  heading2Animation,
+  sectionAboutAnimation,
 };

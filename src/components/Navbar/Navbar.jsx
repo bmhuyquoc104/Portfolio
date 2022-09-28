@@ -1,3 +1,4 @@
+import { Link, animateScroll as scroll } from "react-scroll";
 import React from "react";
 import NavbarStyled from "./Navbar.styled";
 import Text from "../Text/Text";
@@ -17,20 +18,33 @@ function Navbar({ direction }) {
     >
       <motion.ol>
         <motion.li variants={listChildrenAnimation}>
-          <Text direction={direction} type="a" text="About" />
+          <Link to="about" smooth={true} offset={-70} duration={500}>
+            <Text direction={direction} color="" type="a" text="About" />
+          </Link>
         </motion.li>
         <motion.li variants={listChildrenAnimation}>
-          <Text direction={direction} type="a" text="Skills" />
+          <Link to="skills" smooth={true} offset={-70} duration={500}>
+            <Text direction={direction} color="" type="a" text="Skills" />
+          </Link>{" "}
         </motion.li>
         <motion.li variants={listChildrenAnimation}>
-          <Text direction={direction} type="a" text="Projects" />
+          <Link to="projects" smooth={true} offset={-70} duration={500}>
+            <Text direction={direction} color="" type="a" text="Projects" />
+          </Link>{" "}
         </motion.li>
         <motion.li variants={listChildrenAnimation}>
-          <Text direction={direction} type="a" text="Contact" />
+          <Link to="contact" smooth={true} offset={-70} duration={500}>
+            <Text direction={direction} color="" type="a" text="Contact" />
+          </Link>{" "}
         </motion.li>
       </motion.ol>
       <motion.div variants={listChildrenAnimation}>
-        <Text direction={direction} size ="0.8125rem" type="button-link" text="Resume" />
+        <Text
+          direction={direction}
+          size="0.8125rem"
+          type="button-link"
+          text="Resume"
+        />
       </motion.div>
     </NavbarStyled>
   );

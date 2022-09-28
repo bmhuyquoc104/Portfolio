@@ -1,3 +1,4 @@
-import Logo from "./images/logo.png";
+import Logo from "./images/logo.svg";
+
 
 export const imageResource = {Logo};

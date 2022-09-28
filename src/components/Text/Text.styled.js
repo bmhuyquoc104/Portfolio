@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const Heading1Styled = styled(motion.h1)`
   font-family: var(--font_sans);
   font-size: clamp(1.8rem, 0.96rem + 4.2vw, 6rem);
-  font-weight: 900;
+  font-weight: 700;
   line-height: 1em;
   color: ${({ theme }) => theme.header.color};
   display: flex;
@@ -17,17 +17,31 @@ const Heading1Styled = styled(motion.h1)`
   }
 `;
 
-const StyledHeading2 = styled.h2``;
+const Heading2Styled = styled(motion.h2)`
+  font-family: var(--font_sans);
+  font-size: clamp(1.5rem, 0.7999999999999999rem + 3.5000000000000004vw, 5rem);
+  font-weight: 500;
+  line-height: 1em;
+  color: ${({ theme, color }) => (color == "" ? theme.header.color : color)};
+  display: flex;
+  gap: 0.2em;
+
+  .words > * {
+    display: inline-block;
+    letter-spacing: -0.01em;
+  }
+`;
 
 const StyledHeading3 = styled.h3``;
 
-const LinkStyled = styled.a`
+const LinkStyled = styled(motion.a)`
   font-family: var(--font_sans);
   font-size: ${({ direction }) =>
     direction === "column" ? "1.25rem" : "0.8125rem"};
   font-weight: 300;
-  color: ${({ theme }) => theme.header.color};
+  color: ${({ theme, color }) => (color == "" ? theme.header.color : color)};
   cursor: pointer;
+  text-decoration: none;
 `;
 
 const ButtonLinkStyled = styled(motion.a)`
@@ -41,14 +55,21 @@ const ButtonLinkStyled = styled(motion.a)`
   padding: 1em 1.25em;
   width: max-content;
   cursor: pointer;
+  text-decoration: none;
 `;
 
 const ParagraphStyled = styled(motion.p)`
-  font-family: var(--font_sans);
+  font-family: var(--font_playFair);
   font-size: clamp(0.85rem, 0.77rem + 0.4vw, 1.25rem);
   line-height: 1.7em;
   font-weight: 400;
   color: ${({ theme }) => theme.text.color};
 `;
 
-export { LinkStyled, Heading1Styled, ButtonLinkStyled, ParagraphStyled };
+export {
+  LinkStyled,
+  Heading1Styled,
+  ButtonLinkStyled,
+  ParagraphStyled,
+  Heading2Styled,
+};
