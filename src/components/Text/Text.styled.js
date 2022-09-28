@@ -46,7 +46,7 @@ const LinkStyled = styled(motion.a)`
 const ButtonLinkStyled = styled(motion.a)`
   font-family: var(--font_sans);
   font-size: ${({ size, direction }) =>
-    direction === "column" ? "1.25rem" : size};
+    direction === "column" ? "1rem" : size};
   font-weight: 300;
   color: var(--clr_primary_color);
   border-radius: 4px;

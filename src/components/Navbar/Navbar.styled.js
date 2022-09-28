@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 const NavbarStyled = styled(motion.nav)`
   display: flex;
-  gap: 2em;
+  gap: ${({ direction }) => (direction === "column" ? "3em" : "2em")};
   align-items: center;
   flex-direction: ${({ direction }) =>
     direction === "column" ? "column" : "row"};
