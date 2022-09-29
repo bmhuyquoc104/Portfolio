@@ -7,7 +7,7 @@ const HeaderStyled = styled(motion.header)`
   align-items: center;
   width: 100%;
   position: fixed;
-  z-index: 2;
+  z-index: 1;
   top: 0;
   left: 0;
   padding: 1em 3em;
@@ -29,6 +29,10 @@ const HeaderStyled = styled(motion.header)`
     & > :nth-child(2) {
       display: none;
     }
+  }
+  @media (max-width:480px){
+    padding: 1em 1.25em;
+
   }
 `;
 

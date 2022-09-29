@@ -123,7 +123,7 @@ const sectionAboutAnimation = {
     opacity: 1,
     transition: {
       type: "easeIn",
-      duration: 0.3,
+      duration: 0.5,
       when: "beforeChildren",
       staggerChildren: 0.2,
     },

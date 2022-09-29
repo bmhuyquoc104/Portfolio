@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const SectionAboutStyled = styled(motion.section)`
   min-height: 100vh;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   padding: 3em 0 1em 3em;
   width: 85%;
 

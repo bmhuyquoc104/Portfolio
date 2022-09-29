@@ -1,12 +1,8 @@
-import { useRef } from "react";
 import SectionAboutStyled from "./SectionAbout.styled";
 import Text from "../Text/Text";
 import FlexContainer from "../Containers/Flex/FlexContainer";
 import { imageResource } from "../../assets/imageResource";
-import {
-  heading2Animation,
-  listChildrenAnimation,
-} from "../../style/AnimationStyled";
+import { heading2Animation,listChildrenAnimation } from "../../style/AnimationStyled";
 import Image from "../Containers/ImageContainer/Image";
 
 function SectionAbout() {
@@ -46,12 +42,13 @@ function SectionAbout() {
           Problem-solver, autonomous worker, and high-detail oriented.
           Enthusiasm for soccer, history, TV shows, movies, and books. A
           third-year software engineering student who will graduate the
-          following year. Interested in working with other passion developers.
+          following year. 
         </Text>
         <Text type="p">
           My main focus these days is building an accessible, scalable, great
-          UX/UI website with React and its ecosystem.
+          UX/UI website. I am also interested in working with other passion developers on a big project to learn from them.
         </Text>
+        <Text variants ={listChildrenAnimation} color ="var(--clr_primary_color)" type="a" text="Let's make something special!"/>
       </FlexContainer>
       <Image>
         <img src={imageResource.Logo} alt="My Photo" />
