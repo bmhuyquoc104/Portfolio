@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {motion} from "framer-motion"
+import { motion } from "framer-motion";
 
 const FlexContainerStyled = styled(motion.div)`
   display: flex;
@@ -7,6 +7,7 @@ const FlexContainerStyled = styled(motion.div)`
   justify-content: ${({ justifyContent }) => justifyContent || "center"};
   align-items: ${({ alignItems }) => alignItems || "center"};
   gap: ${({ gap }) => gap || "1em"};
+  width: ${({ width }) => width || "100%"};
 `;
 
 export default FlexContainerStyled;

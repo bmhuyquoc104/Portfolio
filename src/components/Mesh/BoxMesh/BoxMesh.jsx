@@ -1,16 +1,18 @@
 import { useRef } from "react";
 import { useFrame } from "@react-three/fiber";
-import { Html } from "@react-three/drei";
+import { Html, Center } from "@react-three/drei";
 
 function Box({ text, ...props }) {
   return (
-      <mesh {...props}>
-      <boxGeometry args={[1, 1, 1]} />
+    <mesh {...props}>
+      <Center>
+        <boxGeometry args={[1, 1, 1]} />
         <meshBasicMaterial transparent opacity={0} />
-        <Html sprite transform distanceFactor={4}>
+        <Html distanceFactor={8}>
           <div className="content">{text}</div>
         </Html>
-      </mesh>
+      </Center>
+    </mesh>
   );
 }
 
@@ -34,7 +36,7 @@ function Content() {
       <Box text="SQL" position={[0, 2, 1]} />
       <Box text="TypeScript" position={[-2, 1, -1]} />
       <Box text="Styled Components" position={[-1, 0, -1]} />
-      <Box text="Redux" position={[-2, 0, -1]} />
+      <Box text="Redux Toolkit" position={[-2, 2, -1]} />
       <Box text="Framer Motion" position={[-2, 0, 1]} />
       <Box text="React Query" position={[-2, 1, 1]} />
       <Box text="React Router" position={[-2, -1, 1]} />
@@ -42,6 +44,10 @@ function Content() {
       <Box text="AWS" position={[-1, 0, 1]} />
       <Box text="MUI" position={[-1, 1, 1]} />
       <Box text="Machine Learning" position={[-1, 1, -1]} />
+      <Box text="Swift" position={[-1, 1, 0]} />
+      <Box text="Android" position={[-1, -1, 0]} />
+      <Box text="Firebase" position={[-1, 0, 0]} />
+      <Box text="React Form" position={[-1, 2, -1]} />
     </group>
   );
 }

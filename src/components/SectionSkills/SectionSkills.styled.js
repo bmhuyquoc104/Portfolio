@@ -1,18 +1,18 @@
 import styled from "styled-components";
 
 const SectionSkillStyled = styled.section`
-  min-height: 100vh;
   display: flex;
-  align-items: center;
-  padding: 3em 0 1em 3em;
+  justify-content: center;
+  gap: 1em;
+  padding: 3em 3em 1em 3em;
   width: 85%;
+  min-height:100vh;
   & > :first-child {
     width: 50%;
   }
   & > :last-child {
     width: 50% !important;
-    height:70vh !important;
-
+    height: 70vh !important;
   }
   @media (max-width: 768px) {
     width: 100%;
@@ -25,12 +25,12 @@ const SectionSkillStyled = styled.section`
         width: 70%;
       }
       & > :last-child {
-        width: 100% ;
+        width: 100%;
       }
     }
     & > :last-child {
       width: 100% !important;
-      height:65vh !important;
+      height: 65vh !important;
     }
   }
 `;

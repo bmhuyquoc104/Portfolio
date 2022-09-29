@@ -1,6 +1,6 @@
 import React, { Suspense } from "react";
 import SectionSkillStyled from "./SectionSkills.styled";
-import Content from "../BoxMesh/BoxMesh";
+import Content from "../Mesh/BoxMesh/BoxMesh";
 import { Canvas } from "@react-three/fiber";
 import Text from "../Text/Text";
 import FlexContainer from "../Containers/Flex/FlexContainer";
@@ -10,6 +10,8 @@ import {
 } from "../../style/AnimationStyled";
 import UnorderedList from "../List/UnorderedList";
 import ListChildren from "../List/ListChildren/ListChildren";
+import { OrbitControls } from "@react-three/drei";
+
 
 function SectionSkills() {
   return (
@@ -71,11 +73,16 @@ function SectionSkills() {
           </UnorderedList>
         </FlexContainer>
       </FlexContainer>
-      <Canvas>
+      <Canvas camera>
         <Suspense fallback={null}>
           <ambientLight />
           <pointLight position={[10, 10, 10]} />
           <Content />
+          <OrbitControls
+            enablePan={true}
+            enableZoom={false}
+            enableRotate={true}
+          />
         </Suspense>
       </Canvas>
     </SectionSkillStyled>

@@ -8,6 +8,7 @@ function FlexContainer({
   alignItems,
   children,
   gap,
+  width
 }) {
 
   return (
@@ -20,6 +21,7 @@ function FlexContainer({
       justifyContent={justifyContent}
       alignItems={alignItems}
       gap={gap}
+      width={width}
     >
       {children}
     </FlexContainerStyled>
