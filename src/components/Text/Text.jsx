@@ -4,6 +4,7 @@ import {
   ButtonLinkStyled,
   ParagraphStyled,
   Heading2Styled,
+  Heading3Styled,
 } from "./Text.styled";
 import { motion } from "framer-motion";
 
@@ -92,6 +93,8 @@ function Text({
         })}
       </Heading2Styled>
     );
+  } else if (type == "h3") {
+    return <Heading3Styled variants={variants}>{text}</Heading3Styled>;
   }
 }
 

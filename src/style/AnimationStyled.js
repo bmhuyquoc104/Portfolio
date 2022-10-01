@@ -110,7 +110,7 @@ const ImageAnimation = {
     opacity: 1,
     transition: {
       type: "circIn",
-      duration:2,
+      duration: 2,
     },
   },
 };
@@ -126,6 +126,29 @@ const sectionAboutAnimation = {
       duration: 0.5,
       when: "beforeChildren",
       staggerChildren: 0.2,
+    },
+  },
+};
+
+const AbsoluteFlexContainerAnimation = {
+  hidden: {
+    y: 10,
+    opacity: 0,
+  },
+  show: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: "easeIn",
+      duration: 0.3,
+    },
+  },
+  exit: {
+    y: 10,
+    opacity: 0,
+    transition: {
+      type: "easeOut",
+      duration: 0.3,
     },
   },
 };
@@ -146,6 +169,47 @@ const heading2Animation = {
   },
 };
 
+const ScaleOutInAnimation = {
+  show: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      duration: 0.5,
+      type: "spring",
+    },
+  },
+  hidden: {
+    opacity: 0,
+    scale: 0,
+  },
+  exit: {
+    opacity: 0,
+    scale: 0,
+    transition: {
+      duration: 0.3,
+      type: "spring",
+    },
+  },
+};
+
+const FadeInOutAnimation = {
+  show: {
+    opacity: 1,
+    transition: {
+      duration: 0.2,
+    },
+  },
+  hidden: {
+    opacity: 0,
+  },
+  exit: {
+    opacity: 0,
+    transition: {
+      duration: 0.2,
+    },
+  },
+};
+
 export {
   DropDownAnimation,
   listParentAnimation,
@@ -157,4 +221,7 @@ export {
   heading2Animation,
   sectionAboutAnimation,
   ImageAnimation,
+  AbsoluteFlexContainerAnimation,
+  ScaleOutInAnimation,
+  FadeInOutAnimation,
 };

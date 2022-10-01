@@ -15,7 +15,6 @@ const UnorderedListStyled = styled(motion.ul)`
 
   @media (max-width: 480px) {
     flex-direction: row;
-
     width: 100%;
     padding: ${({p}) => p || "1em" };
   }

@@ -32,7 +32,12 @@ const Heading2Styled = styled(motion.h2)`
   }
 `;
 
-const StyledHeading3 = styled.h3``;
+const Heading3Styled = styled(motion.h3)`
+  font-family: var(--font_sans);
+  font-size: clamp(1rem, 0.8rem + 1vw, 2rem);
+  font-weight: 400;
+  color: ${({ theme }) => theme.header.color};
+`;
 
 const LinkStyled = styled(motion.a)`
   font-family: var(--font_playFair);
@@ -71,4 +76,5 @@ export {
   ButtonLinkStyled,
   ParagraphStyled,
   Heading2Styled,
+  Heading3Styled,
 };

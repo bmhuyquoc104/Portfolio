@@ -3,7 +3,7 @@ import SectionSkillStyled from "./SectionSkills.styled";
 import Content from "../Mesh/BoxMesh/BoxMesh";
 import { Canvas } from "@react-three/fiber";
 import Text from "../Text/Text";
-import FlexContainer from "../Containers/Flex/FlexContainer";
+import {FlexContainer} from "../Containers/Flex/FlexContainer";
 import {
   heading2Animation,
   listChildrenAnimation,

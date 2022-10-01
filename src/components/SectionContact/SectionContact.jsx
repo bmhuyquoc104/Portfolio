@@ -1,7 +1,7 @@
 import React, { Suspense } from "react";
 import SectionContactStyled from "./SectionContact.styled";
 import Text from "../Text/Text";
-import FlexContainer from "../Containers/Flex/FlexContainer";
+import {FlexContainer} from "../Containers/Flex/FlexContainer";
 import { Canvas } from "@react-three/fiber";
 import Text3DMesh from "../Mesh/Text3D/Text3DMesh";
 import { OrbitControls } from "@react-three/drei";

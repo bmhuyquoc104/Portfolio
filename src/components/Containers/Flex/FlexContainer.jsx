@@ -1,6 +1,9 @@
 import React from "react";
-import FlexContainerStyled from "./FlexContainer.styled";
-import {sectionAboutAnimation} from "../../../style/AnimationStyled"
+import {
+  FlexContainerStyled,
+  AbsoluteFlexContainerStyled,
+} from "./FlexContainer.styled";
+import { sectionAboutAnimation,AbsoluteFlexContainerAnimation } from "../../../style/AnimationStyled";
 
 function FlexContainer({
   direction,
@@ -8,9 +11,8 @@ function FlexContainer({
   alignItems,
   children,
   gap,
-  width
+  width,
 }) {
-
   return (
     <FlexContainerStyled
       whileInView="show"
@@ -28,4 +30,17 @@ function FlexContainer({
   );
 }
 
-export default FlexContainer;
+function AbsoluteFlexContainer({ children }) {
+  return (
+    <AbsoluteFlexContainerStyled
+      initial="hidden"
+      exit="exit"
+      animate = "show"
+      variants={AbsoluteFlexContainerAnimation}
+    >
+      {children}
+    </AbsoluteFlexContainerStyled>
+  );
+}
+
+export { AbsoluteFlexContainer, FlexContainer };

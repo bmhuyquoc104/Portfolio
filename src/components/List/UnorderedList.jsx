@@ -1,7 +1,6 @@
 import React from "react";
 import UnorderedListStyled from "./UnorderedList.styled";
-import ListChildren from "./ListChildren/ListChildren";
-import Link from "../Link/Link";
+
 
 function UnorderedList({
   variants,

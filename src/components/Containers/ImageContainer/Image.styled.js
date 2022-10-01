@@ -7,7 +7,6 @@ const ImageStyled = styled(motion.div)`
   img {
     width: 100%;
     height: 100%;
-    aspect-ratio: 1/1;
     object-fit: contain;
   }
 `;

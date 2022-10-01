@@ -1,9 +1,28 @@
-import React from "react";
 import ListChildrenStyled from "./ListChildren.styled";
 
-function ListChildren({ children, variants }) {
+function ListChildren({
+  onClick,
+  children,
+  variants,
+  p,
+  bg,
+  br,
+  fz,
+  isActive,
+}) {
+  console.log(isActive);
   return (
-    <ListChildrenStyled variants={variants}>{children}</ListChildrenStyled>
+    <ListChildrenStyled
+      p={p}
+      bg={bg}
+      br={br}
+      className={isActive == "active" ? "active" : ""}
+      fz={fz}
+      onClick={onClick}
+      variants={variants}
+    >
+      {children}
+    </ListChildrenStyled>
   );
 }
 

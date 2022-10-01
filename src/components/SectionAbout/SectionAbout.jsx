@@ -1,6 +1,6 @@
 import SectionAboutStyled from "./SectionAbout.styled";
 import Text from "../Text/Text";
-import FlexContainer from "../Containers/Flex/FlexContainer";
+import {FlexContainer} from "../Containers/Flex/FlexContainer";
 import { imageResource } from "../../assets/imageResource";
 import { heading2Animation,listChildrenAnimation } from "../../style/AnimationStyled";
 import Image from "../Containers/ImageContainer/Image";
