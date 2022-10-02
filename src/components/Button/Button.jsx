@@ -1,9 +1,8 @@
-import React from 'react'
+import React from "react";
+import ButtonStyled from "./Button.styled";
 
-function Button() {
-  return (
-    <div>Button</div>
-  )
+function Button({ children, onClick }) {
+  return <ButtonStyled onClick={onClick}>{children}</ButtonStyled>;
 }
 
-export default Button
+export default Button;

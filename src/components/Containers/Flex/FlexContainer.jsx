@@ -2,8 +2,12 @@ import React from "react";
 import {
   FlexContainerStyled,
   AbsoluteFlexContainerStyled,
+  FixedFlexContainerStyled,
 } from "./FlexContainer.styled";
-import { sectionAboutAnimation,AbsoluteFlexContainerAnimation } from "../../../style/AnimationStyled";
+import {
+  sectionAboutAnimation,
+  AbsoluteFlexContainerAnimation,
+} from "../../../style/AnimationStyled";
 
 function FlexContainer({
   direction,
@@ -12,6 +16,8 @@ function FlexContainer({
   children,
   gap,
   width,
+  cursor,
+  onClick,
 }) {
   return (
     <FlexContainerStyled
@@ -24,6 +30,8 @@ function FlexContainer({
       alignItems={alignItems}
       gap={gap}
       width={width}
+      onClick={onClick}
+      cursor={cursor}
     >
       {children}
     </FlexContainerStyled>
@@ -35,7 +43,7 @@ function AbsoluteFlexContainer({ children }) {
     <AbsoluteFlexContainerStyled
       initial="hidden"
       exit="exit"
-      animate = "show"
+      animate="show"
       variants={AbsoluteFlexContainerAnimation}
     >
       {children}
@@ -43,4 +51,10 @@ function AbsoluteFlexContainer({ children }) {
   );
 }
 
-export { AbsoluteFlexContainer, FlexContainer };
+function FixedFlexContainer() {
+  return <FixedFlexContainerStyled></FixedFlexContainerStyled>;
+}
+
+
+
+export { AbsoluteFlexContainer, FlexContainer, FixedFlexContainer };

@@ -10,9 +10,10 @@ import SectionSkills from "./components/SectionSkills/SectionSkills";
 import SectionProjects from "./components/SectionProjects/SectionProjects";
 import SectionContact from "./components/SectionContact/SectionContact";
 
+
 function App() {
   const [theme, themeToggler] = useTheme();
-
+  
   const themeMode = theme === "lightTheme" ? lightTheme : darkTheme;
 
   return (

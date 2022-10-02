@@ -34,18 +34,28 @@ const Heading2Styled = styled(motion.h2)`
 
 const Heading3Styled = styled(motion.h3)`
   font-family: var(--font_sans);
-  font-size: clamp(1rem, 0.8rem + 1vw, 2rem);
-  font-weight: 400;
+  font-size: ${({ fz }) => fz || "clamp(1rem, 0.8rem + 1vw, 2rem)"};
+  font-weight: 900;
   color: ${({ theme }) => theme.header.color};
+`;
+
+const Heading4Styled = styled(motion.h4)`
+  font-family: var(--font_sans);
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--clr_primary_color);
 `;
 
 const LinkStyled = styled(motion.a)`
   font-family: var(--font_playFair);
   font-size: clamp(0.8rem, 0.76rem + 0.19999999999999996vw, 1rem);
   font-weight: 300;
-  color: ${({ theme, color }) => (color == "" ? theme.header.color : color)};
+  color: ${({ theme, color }) => (color == undefined ? theme.header.color : color)};
   cursor: pointer;
   text-decoration: none;
+  &:hover{
+    text-decoration:underline;
+  }
 `;
 
 const ButtonLinkStyled = styled(motion.a)`
@@ -77,4 +87,5 @@ export {
   ParagraphStyled,
   Heading2Styled,
   Heading3Styled,
+  Heading4Styled,
 };

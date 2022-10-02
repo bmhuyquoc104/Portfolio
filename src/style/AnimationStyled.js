@@ -130,6 +130,19 @@ const sectionAboutAnimation = {
   },
 };
 
+const sectionProjectAnimation = {
+  hidden: {
+    opacity: 0,
+  },
+  show: {
+    opacity: 1,
+    transition: {
+      type: "tween",
+      duration: 3,
+    },
+  },
+};
+
 const AbsoluteFlexContainerAnimation = {
   hidden: {
     y: 10,
@@ -210,6 +223,27 @@ const FadeInOutAnimation = {
   },
 };
 
+const LinearXDirection = {
+  show: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.3,
+    },
+  },
+  hidden: {
+    opacity: 0,
+    x: 100,
+  },
+  exit: {
+    opacity: 0,
+    x: 100,
+    transition: {
+      duration: 0.3,
+    },
+  },
+};
+
 export {
   DropDownAnimation,
   listParentAnimation,
@@ -224,4 +258,6 @@ export {
   AbsoluteFlexContainerAnimation,
   ScaleOutInAnimation,
   FadeInOutAnimation,
+  LinearXDirection,
+  sectionProjectAnimation,
 };

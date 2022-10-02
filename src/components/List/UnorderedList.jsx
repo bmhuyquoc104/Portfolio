@@ -1,7 +1,6 @@
 import React from "react";
 import UnorderedListStyled from "./UnorderedList.styled";
 
-
 function UnorderedList({
   variants,
   jc,
@@ -12,6 +11,7 @@ function UnorderedList({
   mt,
   p,
   wrap,
+  height,
 }) {
   return (
     <UnorderedListStyled
@@ -23,6 +23,7 @@ function UnorderedList({
       gap={gap}
       childrenWidth={childrenWidth}
       direction={direction}
+      height = {height}
     >
       {children}
     </UnorderedListStyled>

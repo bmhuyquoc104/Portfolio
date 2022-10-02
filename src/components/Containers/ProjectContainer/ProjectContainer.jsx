@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import ProjectContainerStyled from "./ProjectContainer.styled";
 import { AbsoluteFlexContainer } from "../Flex/FlexContainer";
 import Text from "../../Text/Text";
@@ -6,9 +6,21 @@ import UnorderedList from "../../List/UnorderedList";
 import ListChildren from "../../List/ListChildren/ListChildren";
 import { AnimatePresence } from "framer-motion";
 import { FadeInOutAnimation } from "../../../style/AnimationStyled";
+import Button from "../../Button/Button";
+import ProjectDetailContainer from "../ProjectDetailContainer/ProjectDetailContainer";
+import { TabContext } from "../../../hooks/useContext";
 
-function ProjectContainer({ image, name, technologies, description }) {
+function ProjectContainer({
+  image,
+  name,
+  technologies,
+  website,
+  repo,
+  about,
+  description,
+}) {
   const [isHover, setIsHover] = useState(false);
+  const { setLearnMore, setProject } = useContext(TabContext);
   return (
     <ProjectContainerStyled
       onHoverStart={() => setIsHover(true)}
@@ -16,7 +28,7 @@ function ProjectContainer({ image, name, technologies, description }) {
       animate="show"
       initial="hidden"
       exit="exit"
-      variants = {FadeInOutAnimation}
+      variants={FadeInOutAnimation}
       layout
     >
       <img src={image} />
@@ -26,7 +38,12 @@ function ProjectContainer({ image, name, technologies, description }) {
           <AbsoluteFlexContainer>
             <Text type="h3" text={name} />
             <Text type="p">{description}</Text>
-            <UnorderedList gap="0.5em" wrap="wrap" childrenWidth="fit-content">
+            <UnorderedList
+              p="0"
+              gap="0.5em"
+              wrap="wrap"
+              childrenWidth="fit-content"
+            >
               {technologies.map((technology, index) => (
                 <ListChildren
                   key={index}
@@ -40,9 +57,27 @@ function ProjectContainer({ image, name, technologies, description }) {
                 </ListChildren>
               ))}
             </UnorderedList>
+            <Button
+              onClick={() => {
+                setLearnMore(true);
+                setProject({
+                  image: image,
+                  about: about,
+                  description: description,
+                  technologies: technologies,
+                  name: name,
+                  website: website,
+                  repo: repo,
+                });
+              }}
+            >
+              Learn more
+            </Button>
           </AbsoluteFlexContainer>
         )}
       </AnimatePresence>
+
+    
     </ProjectContainerStyled>
   );
 }

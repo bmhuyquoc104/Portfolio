@@ -36,7 +36,6 @@ const GlobalStyled = createGlobalStyle`
   font-family:var(--font_sans);
   width:8ch;
   font-size: clamp(0.8rem, 0.76rem + 0.19999999999999996vw, 1rem);
-
 }
 
 

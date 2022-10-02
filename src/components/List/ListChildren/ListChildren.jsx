@@ -10,7 +10,6 @@ function ListChildren({
   fz,
   isActive,
 }) {
-  console.log(isActive);
   return (
     <ListChildrenStyled
       p={p}

@@ -1,15 +1,24 @@
 import React from "react";
 import SectionProjectsStyled from "./SectionProjects.styled";
 import Text from "../Text/Text";
-import { FlexContainer } from "../Containers/Flex/FlexContainer";
+import {
+  FixedFlexContainer,
+  FlexContainer,
+} from "../Containers/Flex/FlexContainer";
 import UnorderedList from "../List/UnorderedList";
 import ListChildren from "../List/ListChildren/ListChildren";
 import Tab from "../Tab/Tab";
 import { TabContext } from "../../hooks/useContext";
-import { useState } from "react";
-import { motion } from "framer-motion";
-import { heading2Animation,sectionAboutAnimation } from "../../style/AnimationStyled";
+import { useState, useEffect } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import {
+  heading2Animation,
+  sectionAboutAnimation,
+  listParentAnimation,
+} from "../../style/AnimationStyled";
 import projectsArr from "../../assets/ProjectList";
+import ProjectDetailContainer from "../Containers/ProjectDetailContainer/ProjectDetailContainer";
+
 function SectionProjects() {
   const arr = [
     {
@@ -26,9 +35,29 @@ function SectionProjects() {
     },
   ];
   const [selectedTab, setSelectedTab] = useState(arr[0].items);
+  const [project, setProject] = useState({});
+  const [learnMore, setLearnMore] = useState(false);
+
+  useEffect(() => {
+    if (learnMore) {
+      document.body.style.overflow = "hidden";
+    }
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [learnMore]);
 
   return (
-    <TabContext.Provider value={{ selectedTab, setSelectedTab }}>
+    <TabContext.Provider
+      value={{
+        selectedTab,
+        setSelectedTab,
+        project,
+        setProject,
+        learnMore,
+        setLearnMore,
+      }}
+    >
       <SectionProjectsStyled
         whileInView="show"
         initial="hidden"
@@ -58,36 +87,26 @@ function SectionProjects() {
                 ) : null}
               </ListChildren>
             ))}
-            {/* <ListChildren
-              isActive={isActive}
-              onClick={() => {
-                setSelectedTab(all);
-                setIsActive(true);
-              }}
-            >
-              All
-            </ListChildren>
-            <ListChildren
-              isActive={isActive}
-              onClick={() => {
-                setSelectedTab(projects.web);
-                setIsActive(true);
-              }}
-            >
-              Web Development
-            </ListChildren>
-            <ListChildren
-              isActive={isActive}
-              onClick={() => {
-                setSelectedTab(projects.mobile);
-                setIsActive(true);
-              }}
-            >
-              Mobile Development
-            </ListChildren> */}
           </UnorderedList>
         </FlexContainer>
         <Tab></Tab>
+        <AnimatePresence mode="wait">
+          {learnMore && (
+            <div>
+              <FixedFlexContainer />
+              <ProjectDetailContainer
+                website={project.website}
+                image={project.image}
+                repo={project.repo}
+                name={project.name}
+                about={project.about}
+                technologies={project.technologies}
+                description={project.description}
+                setLearnMore={setLearnMore}
+              />
+            </div>
+          )}
+        </AnimatePresence>
       </SectionProjectsStyled>
     </TabContext.Provider>
   );

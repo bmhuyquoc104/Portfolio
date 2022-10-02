@@ -5,6 +5,7 @@ import {
   ParagraphStyled,
   Heading2Styled,
   Heading3Styled,
+  Heading4Styled,
 } from "./Text.styled";
 import { motion } from "framer-motion";
 
@@ -16,12 +17,14 @@ function Text({
   variants,
   color,
   link,
+  target,
   children,
 }) {
   if (type == "a") {
     return (
       <LinkStyled
         href={link}
+        target={target}
         variants={variants}
         color={color}
         direction={direction}
@@ -95,6 +98,8 @@ function Text({
     );
   } else if (type == "h3") {
     return <Heading3Styled variants={variants}>{text}</Heading3Styled>;
+  } else if (type == "h4") {
+    return <Heading4Styled variants={variants}>{text}</Heading4Styled>;
   }
 }
 

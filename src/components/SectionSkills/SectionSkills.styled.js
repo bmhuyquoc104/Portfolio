@@ -11,6 +11,7 @@ const SectionSkillStyled = styled.section`
     width: 50%;
   }
   & > :last-child {
+    align-self: center;
     width: 50% !important;
     height: 70vh !important;
   }

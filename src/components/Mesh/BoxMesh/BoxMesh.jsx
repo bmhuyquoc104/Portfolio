@@ -8,7 +8,7 @@ function Box({ text, ...props }) {
       <Center>
         <boxGeometry args={[1, 1, 1]} />
         <meshBasicMaterial transparent opacity={0} />
-        <Html distanceFactor={8}>
+        <Html transform sprite center zIndexRange={[1, 0]}  distanceFactor={6}>
           <div className="content">{text}</div>
         </Html>
       </Center>
