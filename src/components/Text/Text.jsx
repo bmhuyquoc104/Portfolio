@@ -34,7 +34,12 @@ function Text({
     );
   } else if (type == "button-link") {
     return (
-      <ButtonLinkStyled variants={variants} size={size} direction={direction}>
+      <ButtonLinkStyled
+        href={link}
+        variants={variants}
+        size={size}
+        direction={direction}
+      >
         {text}
       </ButtonLinkStyled>
     );

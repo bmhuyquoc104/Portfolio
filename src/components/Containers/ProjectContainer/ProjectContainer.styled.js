@@ -11,6 +11,12 @@ const ProjectContainerStyled = styled(motion.div)`
     height: 100%;
     object-fit: cover;
   }
+  .mobile{
+    width: 100%;
+    border-radius: 5px;
+    height: 100%;
+    object-fit: cover;
+  }
   @media (max-width: 480px) {
     min-height: 400px;
   }

@@ -22,7 +22,13 @@ const ProjectDetailContainerStyled = styled(motion.div)`
     height: 100%;
     object-fit: cover;
   }
- 
+  .mobile{
+    width: 299px;
+    border-radius: 5px;
+    height: 600px;
+    object-fit: cover;
+    align-self:center;
+  }
 
   @media (max-width: 510px) {
     width: 100%;

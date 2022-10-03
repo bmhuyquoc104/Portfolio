@@ -16,22 +16,18 @@ import {
   sectionAboutAnimation,
   listParentAnimation,
 } from "../../style/AnimationStyled";
-import projectsArr from "../../assets/ProjectList";
+import projects from "../../assets/ProjectList";
 import ProjectDetailContainer from "../Containers/ProjectDetailContainer/ProjectDetailContainer";
 
 function SectionProjects() {
   const arr = [
     {
-      title: "All",
-      items: projectsArr.all,
-    },
-    {
       title: "Web Development",
-      items: projectsArr.web,
+      items: projects.web,
     },
     {
       title: "Mobile Development",
-      items: projectsArr.mobile,
+      items: projects.mobile,
     },
   ];
   const [selectedTab, setSelectedTab] = useState(arr[0].items);
@@ -102,6 +98,7 @@ function SectionProjects() {
                 about={project.about}
                 technologies={project.technologies}
                 description={project.description}
+                id = {project.id}
                 setLearnMore={setLearnMore}
               />
             </div>

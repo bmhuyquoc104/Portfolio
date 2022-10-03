@@ -142,44 +142,46 @@ const projects = {
   ],
   mobile: [
     {
-      id: "mobile-1",
-      name: "Countries",
-      description: "Explore all countries' information from your website.",
+      id: "mobile-0",
+      name: "Universal",
+      description: "Find your cinema and book the ticket!.",
       about:
-        "A responsive website that built to let a user research and gain knowledge of all countries'data on the world. The product provides customize search and filter option for user to get access to any countries ",
-      technologies: [
-        "React",
-        "Styled Components",
-        "React Query",
-        "React Router",
-      ],
-      image: `${imageResource.CountryWebsite}`,
-      website: "https://bmhuyquoc104-countries-website.netlify.app/",
+        "A gorgeous and expertly cinema management app that let the client book the movie ticket online. This app also provides a list of available cinemas in each cities. The users can receive the latest discount notification and watch the trailer of streaming and upcoming movie in the cinema.",
+      technologies: ["Java", "Firebase"],
+      image: `${imageResource.AmbrosiaProject}`,
+      repo: "https://github.com/bmhuyquoc104/android_cinema_management",
+    },
+    {
+      id: "mobile-1",
+      name: "Ambrosia",
+      description: "Explore all restaurants near you!.",
+      about:
+        "A gorgeous and expertly restaurant discovery app that provides client various of different type of restaurants in their area.",
+      technologies: ["SwiftUI", "Firebase"],
+      image: `${imageResource.AmbrosiaProject}`,
+      repo: "https://bmhuyquoc104-countries-website.netlify.app/",
     },
     {
       id: "mobile-2",
-      name: "Countries Sir",
-      description: "Explore all countries' information from your website.",
+      name: "Chinese Poker",
+      description: "It's poker time!",
       about:
-        "A responsive website that built to let a user research and gain knowledge of all countries'data on the world. The product provides customize search and filter option for user to get access to any countries ",
-      technologies: [
-        "React",
-        "Styled Components",
-        "React Query",
-        "React Router",
-      ],
-      image: `${imageResource.CountryWebsite}`,
-      website: "https://bmhuyquoc104-countries-website.netlify.app/",
+        "A gorgeous and expertly game that let the user play chinese poker game. This game also provides a leader board and different type of modes to suit all players.",
+      technologies: ["SwiftUI"],
+      image: `${imageResource.AmbrosiaProject}`,
+      repo: "https://github.com/bmhuyquoc104/ChinesePoker2",
+    },
+    {
+      id: "mobile-3",
+      name: "Daredevil's Profile",
+      description: "All you to need to know about Daredevil is here! ",
+      about:
+        "A gorgeous app that provides all information about daredevil character in marvel. This app is designed to marvel fan to follow their favorite super hero.",
+      technologies: ["SwiftUI"],
+      image: `${imageResource.AmbrosiaProject}`,
+      repo: "https://github.com/bmhuyquoc104/Daredevil-App",
     },
   ],
 };
 
-export const { web: web } = projects;
-
-const { mobile: mobile } = projects;
-
-const all = [...web, ...mobile];
-
-const projectsArr = { ...projects, all: all };
-
-export default projectsArr;
+export default projects;

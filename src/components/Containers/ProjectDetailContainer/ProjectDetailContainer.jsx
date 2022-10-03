@@ -17,6 +17,7 @@ function ProjectDetailContainer({
   about,
   technologies,
   setLearnMore,
+  id,
 }) {
   return (
     <ProjectDetailContainerStyled
@@ -38,7 +39,11 @@ function ProjectDetailContainer({
       <FlexContainer direction="column" alignItems="flex-start" gap="1.2em">
         <Text type="h3" text={name} />
         <Text type="p">{description}</Text>
-        <img src={image} alt={`${name} project image`} />
+        <img
+          className={id.includes("mobile") ? "mobile" : ""}
+          src={image}
+          alt={`${name} project image`}
+        />
         <Text type="h4" text="About" />
         <Text type="p">{about}</Text>
         <Text type="h4" text="Technologies" />
@@ -63,9 +68,13 @@ function ProjectDetailContainer({
             </ListChildren>
           ))}
         </UnorderedList>
-        <Text type="h4" text="Websites" />
+        {!id.includes("mobile") && (
+          <>
+            <Text type="h4" text="Websites" />
+            <Text link={website} target="_blank" type="a" text={website} />
+          </>
+        )}
 
-        <Text link={website} target="_blank" type="a" text={website} />
         <Text type="h4" text="Source Code" />
         <Text link={repo} target="_blank" type="a" text={repo} />
       </FlexContainer>

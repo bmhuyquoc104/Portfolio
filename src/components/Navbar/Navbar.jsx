@@ -8,8 +8,6 @@ import {
 import { motion } from "framer-motion";
 
 function Navbar({ direction }) {
-
-
   return (
     <NavbarStyled
       variants={listParentAnimation}

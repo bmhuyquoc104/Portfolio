@@ -44,7 +44,7 @@ function SectionContact() {
           color="var(--clr_primary_color)"
           text="Check my resume here!"
         />
-        <Text variants={listChildrenAnimation} size="1rem" text="Say Hi 👋" type="button-link" />
+        <Text link ="mailto:bmhuyquoc104@gmail.com" variants={listChildrenAnimation} size="1rem" text="Say Hi 👋" type="button-link" />
       </FlexContainer>
       <Canvas camera={{ position: [0, 0, 5] }}>
         <Suspense fallback={null}>

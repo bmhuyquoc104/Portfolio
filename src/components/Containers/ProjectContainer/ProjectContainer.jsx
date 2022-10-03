@@ -7,7 +7,6 @@ import ListChildren from "../../List/ListChildren/ListChildren";
 import { AnimatePresence } from "framer-motion";
 import { FadeInOutAnimation } from "../../../style/AnimationStyled";
 import Button from "../../Button/Button";
-import ProjectDetailContainer from "../ProjectDetailContainer/ProjectDetailContainer";
 import { TabContext } from "../../../hooks/useContext";
 
 function ProjectContainer({
@@ -18,20 +17,23 @@ function ProjectContainer({
   repo,
   about,
   description,
+  id,
 }) {
+
   const [isHover, setIsHover] = useState(false);
   const { setLearnMore, setProject } = useContext(TabContext);
   return (
     <ProjectContainerStyled
+      layout="preserve-aspect"
+      style={{ height: `${id.includes("mobile") ? "550px" : ""}` }}
       onHoverStart={() => setIsHover(true)}
       onHoverEnd={() => setIsHover(false)}
       animate="show"
       initial="hidden"
       exit="exit"
       variants={FadeInOutAnimation}
-      layout
     >
-      <img src={image} />
+      <img className={id.includes("mobile") ? "mobile" : ""} src={image} />
       <div className="bg"></div>
       <AnimatePresence mode="wait">
         {isHover && (
@@ -68,6 +70,7 @@ function ProjectContainer({
                   name: name,
                   website: website,
                   repo: repo,
+                  id:id
                 });
               }}
             >
@@ -76,8 +79,6 @@ function ProjectContainer({
           </AbsoluteFlexContainer>
         )}
       </AnimatePresence>
-
-    
     </ProjectContainerStyled>
   );
 }

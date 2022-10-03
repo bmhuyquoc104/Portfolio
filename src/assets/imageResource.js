@@ -9,6 +9,7 @@ import LoopsStudioWebsiteImage from "./images/loop_landing_project.png";
 import InteractiveWebsiteImage from "./images/Interactive_comment_website.png";
 import CrowdFundWebsiteImage from "./images/crowdfund_website.png";
 import SnapWebsiteImage from "./images/snap_website.png";
+import AmbrosiaProject from "./images/ambrosia_project.png";
 export const imageResource = {
   Logo,
   Font,
@@ -21,4 +22,5 @@ export const imageResource = {
   InteractiveWebsiteImage,
   CrowdFundWebsiteImage,
   SnapWebsiteImage,
+  AmbrosiaProject,
 };
