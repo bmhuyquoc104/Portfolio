@@ -18,9 +18,12 @@ const ListChildrenStyled = styled(motion.li)`
   span {
     color: var(--clr_primary_color);
     font-size: 0.8125rem;
+    :hover {
+      border: 1px solid var(--clr_primary_color);
+    }
   }
   &.active {
-    padding:0.1em 0;
+    padding: 0.1em 0;
     color: var(--clr_primary_color);
   }
   .underline {
@@ -31,7 +34,6 @@ const ListChildrenStyled = styled(motion.li)`
     height: 2px;
     background: var(--clr_primary_color);
   }
- 
 `;
 
 export default ListChildrenStyled;

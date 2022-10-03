@@ -71,12 +71,18 @@ function ProjectDetailContainer({
         {!id.includes("mobile") && (
           <>
             <Text type="h4" text="Websites" />
-            <Text link={website} target="_blank" type="a" text={website} />
+            <Text
+              td="underline"
+              link={website}
+              target="_blank"
+              type="a"
+              text={website}
+            />
           </>
         )}
 
         <Text type="h4" text="Source Code" />
-        <Text link={repo} target="_blank" type="a" text={repo} />
+        <Text td="underline" link={repo} target="_blank" type="a" text={repo} />
       </FlexContainer>
     </ProjectDetailContainerStyled>
   );

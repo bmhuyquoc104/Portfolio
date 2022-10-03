@@ -7,7 +7,7 @@ import {
 } from "../../style/AnimationStyled";
 import { motion } from "framer-motion";
 
-function Navbar({ direction }) {
+function Navbar({ direction, setIsToggle }) {
   return (
     <NavbarStyled
       variants={listParentAnimation}
@@ -17,22 +17,54 @@ function Navbar({ direction }) {
     >
       <motion.ol>
         <motion.li variants={listChildrenAnimation}>
-          <Link to="about" smooth={true} offset={-70} duration={500}>
+          <Link
+            onClick={
+              direction == "column" ? () => setIsToggle(false) : () => {}
+            }
+            to="about"
+            smooth={true}
+            offset={-70}
+            duration={500}
+          >
             About
           </Link>
         </motion.li>
         <motion.li variants={listChildrenAnimation}>
-          <Link to="skills" smooth={true} offset={-70} duration={500}>
+          <Link
+            onClick={
+              direction == "column" ? () => setIsToggle(false) : () => {}
+            }
+            to="skills"
+            smooth={true}
+            offset={-70}
+            duration={500}
+          >
             Skills
           </Link>
         </motion.li>
         <motion.li variants={listChildrenAnimation}>
-          <Link to="projects" smooth={true} offset={-70} duration={500}>
+          <Link
+            onClick={
+              direction == "column" ? () => setIsToggle(false) : () => {}
+            }
+            to="projects"
+            smooth={true}
+            offset={-70}
+            duration={500}
+          >
             Projects
           </Link>
         </motion.li>
         <motion.li variants={listChildrenAnimation}>
-          <Link to="contact" smooth={true} offset={-70} duration={500}>
+          <Link
+            onClick={
+              direction == "column" ? () => setIsToggle(false) : () => {}
+            }
+            to="contact"
+            smooth={true}
+            offset={-70}
+            duration={500}
+          >
             Contact
           </Link>
         </motion.li>

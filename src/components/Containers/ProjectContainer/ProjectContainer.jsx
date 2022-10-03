@@ -24,7 +24,7 @@ function ProjectContainer({
   const { setLearnMore, setProject } = useContext(TabContext);
   return (
     <ProjectContainerStyled
-      layout="preserve-aspect"
+      layout
       style={{ height: `${id.includes("mobile") ? "550px" : ""}` }}
       onHoverStart={() => setIsHover(true)}
       onHoverEnd={() => setIsHover(false)}
@@ -37,7 +37,7 @@ function ProjectContainer({
       <div className="bg"></div>
       <AnimatePresence mode="wait">
         {isHover && (
-          <AbsoluteFlexContainer>
+          <AbsoluteFlexContainer className={id.includes("mobile") ? "mobile" : ""}>
             <Text type="h3" text={name} />
             <Text type="p">{description}</Text>
             <UnorderedList

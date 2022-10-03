@@ -50,11 +50,12 @@ const LinkStyled = styled(motion.a)`
   font-family: var(--font_playFair);
   font-size: clamp(0.8rem, 0.76rem + 0.19999999999999996vw, 1rem);
   font-weight: 300;
-  color: ${({ theme, color }) => (color == undefined ? theme.header.color : color)};
+  color: ${({ theme, color }) =>
+    color == undefined ? theme.header.color : color};
   cursor: pointer;
   text-decoration: none;
-  &:hover{
-    text-decoration:underline;
+  &:hover {
+    text-decoration: ${({ td }) => td || ""};
   }
 `;
 

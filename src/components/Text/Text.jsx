@@ -10,6 +10,7 @@ import {
 import { motion } from "framer-motion";
 
 function Text({
+  td,
   type,
   text,
   direction,
@@ -24,6 +25,7 @@ function Text({
     return (
       <LinkStyled
         href={link}
+        td ={td}
         target={target}
         variants={variants}
         color={color}

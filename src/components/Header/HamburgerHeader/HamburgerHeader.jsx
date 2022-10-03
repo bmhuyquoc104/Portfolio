@@ -16,8 +16,8 @@ function HamburgerHeader({ setIsToggle }) {
         initial="hidden"
         exit="exit"
       >
-        <Logo />
-        <Navbar direction="column" />
+        <Logo setIsToggle={setIsToggle} />
+        <Navbar setIsToggle={setIsToggle} direction="column" />
         <AiOutlineClose style={IconStyled} onClick={() => setIsToggle(false)} />
       </HamburgerHeaderStyled>
     </AbsoluteHeaderContainer>

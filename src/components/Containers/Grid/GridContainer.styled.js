@@ -8,7 +8,7 @@ const GridContainerStyled = styled(motion.div)`
   column-gap: 1em;
   &.mobile {
     place-content:space-around;
-    grid-template-columns: repeat(auto-fit, minmax(267px, min-content));
+    grid-template-columns: repeat(auto-fit, minmax(278px, 278px));
   }
   @media (max-width: 768px) {
     padding: 0;

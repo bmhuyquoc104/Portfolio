@@ -38,9 +38,10 @@ function FlexContainer({
   );
 }
 
-function AbsoluteFlexContainer({ children }) {
+function AbsoluteFlexContainer({ children,className }) {
   return (
     <AbsoluteFlexContainerStyled
+      className={className}
       initial="hidden"
       exit="exit"
       animate="show"
@@ -54,7 +55,5 @@ function AbsoluteFlexContainer({ children }) {
 function FixedFlexContainer() {
   return <FixedFlexContainerStyled></FixedFlexContainerStyled>;
 }
-
-
 
 export { AbsoluteFlexContainer, FlexContainer, FixedFlexContainer };

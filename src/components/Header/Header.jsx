@@ -25,7 +25,7 @@ function Header({ variants }) {
   return (
     <HeaderStyled ref={headerRef} variants={variants}>
       <Logo />
-      <Navbar />
+      <Navbar/>
       <AiOutlineMenu style={IconStyled} onClick={() => setIsToggle(true)} />
       <AnimatePresence mode="wait">
         {isToggle && (

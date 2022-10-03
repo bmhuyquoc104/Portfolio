@@ -3,7 +3,7 @@ import SectionSkillStyled from "./SectionSkills.styled";
 import Content from "../Mesh/BoxMesh/BoxMesh";
 import { Canvas } from "@react-three/fiber";
 import Text from "../Text/Text";
-import {FlexContainer} from "../Containers/Flex/FlexContainer";
+import { FlexContainer } from "../Containers/Flex/FlexContainer";
 import {
   heading2Animation,
   listChildrenAnimation,
@@ -11,7 +11,6 @@ import {
 import UnorderedList from "../List/UnorderedList";
 import ListChildren from "../List/ListChildren/ListChildren";
 import { OrbitControls } from "@react-three/drei";
-
 
 function SectionSkills() {
   return (
@@ -27,10 +26,10 @@ function SectionSkills() {
           My main area is full-stack development. I have been building several
           small, medium web projects. My criteria for coding style are clean,
           easy to understand and reusable for future improvements and
-          maintenance. Most of my websites are written in
+          maintenance. Most of my websites are written in {" "}
           <span>
-            <Text color="var(--clr_primary_color)" type="a" text=" ReactJS " />
-          </span>
+            <Text color="var(--clr_primary_color)" type="a" text="ReactJS" />
+          </span>{" "}
           and its ecosystem.
         </Text>
         <Text type="p">
@@ -73,7 +72,7 @@ function SectionSkills() {
           </UnorderedList>
         </FlexContainer>
       </FlexContainer>
-      <Canvas styled ={{zIndex:0}} camera>
+      <Canvas styled={{ zIndex: 0 }} camera>
         <Suspense fallback={null}>
           <ambientLight />
           <pointLight position={[10, 10, 10]} />

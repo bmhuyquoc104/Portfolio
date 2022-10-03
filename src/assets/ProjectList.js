@@ -148,7 +148,7 @@ const projects = {
       about:
         "A gorgeous and expertly cinema management app that let the client book the movie ticket online. This app also provides a list of available cinemas in each cities. The users can receive the latest discount notification and watch the trailer of streaming and upcoming movie in the cinema.",
       technologies: ["Java", "Firebase"],
-      image: `${imageResource.AmbrosiaProject}`,
+      image: `${imageResource.UniversalAppImage}`,
       repo: "https://github.com/bmhuyquoc104/android_cinema_management",
     },
     {
@@ -158,17 +158,17 @@ const projects = {
       about:
         "A gorgeous and expertly restaurant discovery app that provides client various of different type of restaurants in their area.",
       technologies: ["SwiftUI", "Firebase"],
-      image: `${imageResource.AmbrosiaProject}`,
+      image: `${imageResource.AmbrosiaAppImage}`,
       repo: "https://bmhuyquoc104-countries-website.netlify.app/",
     },
     {
       id: "mobile-2",
       name: "Chinese Poker",
-      description: "It's poker time!",
+      description: "Improve your logical skill by playing chinese poker game!",
       about:
         "A gorgeous and expertly game that let the user play chinese poker game. This game also provides a leader board and different type of modes to suit all players.",
       technologies: ["SwiftUI"],
-      image: `${imageResource.AmbrosiaProject}`,
+      image: `${imageResource.ChinesePokerAppImage}`,
       repo: "https://github.com/bmhuyquoc104/ChinesePoker2",
     },
     {
@@ -178,7 +178,7 @@ const projects = {
       about:
         "A gorgeous app that provides all information about daredevil character in marvel. This app is designed to marvel fan to follow their favorite super hero.",
       technologies: ["SwiftUI"],
-      image: `${imageResource.AmbrosiaProject}`,
+      image: `${imageResource.DaredevilAppImage}`,
       repo: "https://github.com/bmhuyquoc104/Daredevil-App",
     },
   ],

@@ -19,7 +19,7 @@ const AbsoluteFlexContainerStyled = styled(motion.div)`
   flex-direction: column;
   gap: 0.75em;
   justify-content: flex-end;
-  padding: 1.5em 1.5em;
+  padding: 1.5em;
   width: 100%;
   height: 100%;
   z-index: 2;
@@ -28,6 +28,18 @@ const AbsoluteFlexContainerStyled = styled(motion.div)`
     rgba(64, 59, 52, 0.2),
     rgba(37, 33, 31, 1)
   );
+  &.mobile {
+    background-image: linear-gradient(
+      180deg,
+      rgba(64, 59, 52, 0.2),
+      rgba(37, 33, 31, 1)
+    );
+    gap:1.25em;
+    padding:0 2em;
+    justify-content:center;
+      /* align-items:center; */
+    background-color:${({ theme }) => theme.navbar.backgroundColor};
+  }
 `;
 
 const FixedFlexContainerStyled = styled.div`

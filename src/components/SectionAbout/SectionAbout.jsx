@@ -1,8 +1,11 @@
 import SectionAboutStyled from "./SectionAbout.styled";
 import Text from "../Text/Text";
-import {FlexContainer} from "../Containers/Flex/FlexContainer";
+import { FlexContainer } from "../Containers/Flex/FlexContainer";
 import { imageResource } from "../../assets/imageResource";
-import { heading2Animation,listChildrenAnimation } from "../../style/AnimationStyled";
+import {
+  heading2Animation,
+  listChildrenAnimation,
+} from "../../style/AnimationStyled";
 import Image from "../Containers/ImageContainer/Image";
 
 function SectionAbout() {
@@ -20,20 +23,20 @@ function SectionAbout() {
           began in 2019 when I applied for the bachelor of Software Engineering
           in RMIT University.Since then, I have been enriching my knowledge and
           enhancing my skill by building lots of project and completing many
-          challenges on
+          challenges on {"  "}
           <span>
             <Text
               color="var(--clr_primary_color)"
               type="a"
-              text=" Frontend Mentor "
+              text="Frontend Mentor"
             />
-          </span>
+          </span>{" "}
           and
           <span>
             <Text
               color="var(--clr_primary_color)"
               type="a"
-              text=" Dev Challenges "
+              text=" Dev Challenges"
             />
           </span>
           .
@@ -42,13 +45,19 @@ function SectionAbout() {
           Problem-solver, autonomous worker, and high-detail oriented.
           Enthusiasm for soccer, history, TV shows, movies, and books. A
           third-year software engineering student who will graduate the
-          following year. 
+          following year.
         </Text>
         <Text type="p">
           My main focus these days is building an accessible, scalable, great
-          UX/UI website. I am also interested in working with other passion developers on a big project to learn from them.
+          UX/UI website. I am also interested in working with other passion
+          developers on a big project to learn from them.
         </Text>
-        <Text variants ={listChildrenAnimation} color ="var(--clr_primary_color)" type="a" text="Let's make something special!"/>
+        <Text
+          variants={listChildrenAnimation}
+          color="var(--clr_primary_color)"
+          type="a"
+          text="Let's make something special!"
+        />
       </FlexContainer>
       <Image>
         <img src={imageResource.Logo} alt="My Photo" />
