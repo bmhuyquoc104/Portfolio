@@ -5,6 +5,7 @@ import {
   listParentAnimation,
   listChildrenAnimation,
 } from "../../style/AnimationStyled";
+import {imageResource} from "../../assets/imageResource"
 import { motion } from "framer-motion";
 
 function Navbar({ direction, setIsToggle }) {
@@ -75,6 +76,8 @@ function Navbar({ direction, setIsToggle }) {
           size="0.8125rem"
           type="button-link"
           text="Resume"
+          link = {imageResource.Resume}
+          target = "_blank"
         />
       </motion.div>
     </NavbarStyled>

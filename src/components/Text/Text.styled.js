@@ -68,7 +68,7 @@ const ButtonLinkStyled = styled(motion.a)`
   border-radius: 4px;
   border: 1px solid var(--clr_primary_color);
   padding: 1em 1.25em;
-  width: max-content !important;
+  width: max-content !important;  
   cursor: pointer;
   text-decoration: none;
 `;

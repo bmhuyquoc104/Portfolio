@@ -5,6 +5,8 @@ import {
   heading2Animation,
   homeAnimation,
 } from "../../style/AnimationStyled";
+import { Link, animateScroll as scroll } from "react-scroll";
+
 import Text from "../Text/Text";
 
 function SectionHome() {
@@ -18,12 +20,15 @@ function SectionHome() {
         passion for creating user-friendly full-stack websites. I have
         experienced in Machine Learning and Mobile Application.
       </Text>
-      <Text
-        variants={listChildrenAnimation}
-        size="1rem"
-        type="button-link"
-        text="See my projects !"
-      />
+      <Link
+        smooth={true}
+        offset={-50}
+        duration={500}
+        className="scroll-link"
+        to="projects"
+      >
+        See my projects !
+      </Link>
     </SectionHomeStyled>
   );
 }

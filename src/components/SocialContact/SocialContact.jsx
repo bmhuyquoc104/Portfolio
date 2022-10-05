@@ -43,7 +43,7 @@ function SocialContact() {
           children={
             <Link
               target="_blank"
-              href="https://www.linkedin.com/in/qu%E1%BB%91c-huy-v%C3%B5-5a2630234/"
+              href="https://www.linkedin.com/in/bmhuyquoc104/"
               children={<FaLinkedinIn style={SocialIconStyled} />}
             />
           }

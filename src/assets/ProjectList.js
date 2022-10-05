@@ -12,6 +12,7 @@ const projects = {
       technologies: [
         "React",
         "TypeScript",
+        "Styled Components",
         "Express",
         "MongoDB",
         "Framer Motion",
@@ -52,7 +53,7 @@ const projects = {
       name: "Countries Discovery",
       description: "Explore all countries' information from your website.",
       about:
-        "A responsive website that built to let a user research and gain knowledge of all countries'data on the world. The product provides customize search and filter option for user to get access to any countries ",
+        "A responsive website that built to let a user research and gain knowledge of all countries'data on the world. The product provides customize search and filter option for user to get access to any countries. ",
       technologies: [
         "React",
         "Styled Components",
@@ -65,7 +66,7 @@ const projects = {
     },
     {
       id: "web-2",
-      name: "Software Jobs Discovery",
+      name: "Software Engineer Jobs Discovery",
       description: "Find you dream jobs by your strengths.",
       about:
         "A responsive website that built to let a user find your wanted software job by filtering their skills or position.",
@@ -73,6 +74,7 @@ const projects = {
         "React",
         "NodeJs",
         "Mongoose",
+        "ExpressJS",
         "Material UI",
         "Redux Toolkit",
         "React Query",
@@ -157,9 +159,9 @@ const projects = {
       description: "Explore all restaurants near you!.",
       about:
         "A gorgeous and expertly restaurant discovery app that provides client various of different type of restaurants in their area.",
-      technologies: ["SwiftUI", "Firebase"],
+      technologies: ["SwiftUI", "Firebase", "Swift"],
       image: `${imageResource.AmbrosiaAppImage}`,
-      repo: "https://bmhuyquoc104-countries-website.netlify.app/",
+      repo: "https://github.com/bmhuyquoc104/Ambrosia",
     },
     {
       id: "mobile-2",
@@ -167,7 +169,7 @@ const projects = {
       description: "Improve your logical skill by playing chinese poker game!",
       about:
         "A gorgeous and expertly game that let the user play chinese poker game. This game also provides a leader board and different type of modes to suit all players.",
-      technologies: ["SwiftUI"],
+      technologies: ["SwiftUI", "Swift"],
       image: `${imageResource.ChinesePokerAppImage}`,
       repo: "https://github.com/bmhuyquoc104/ChinesePoker2",
     },
@@ -177,7 +179,7 @@ const projects = {
       description: "All you to need to know about Daredevil is here! ",
       about:
         "A gorgeous app that provides all information about daredevil character in marvel. This app is designed to marvel fan to follow their favorite super hero.",
-      technologies: ["SwiftUI"],
+      technologies: ["SwiftUI", "Swift"],
       image: `${imageResource.DaredevilAppImage}`,
       repo: "https://github.com/bmhuyquoc104/Daredevil-App",
     },

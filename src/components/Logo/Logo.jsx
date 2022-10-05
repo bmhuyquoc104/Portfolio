@@ -6,7 +6,6 @@ import { Link, animateScroll as scroll } from "react-scroll";
 import { LogoAnimation } from "../../style/AnimationStyled";
 
 function Logo({ setIsToggle }) {
-  console.log(setIsToggle);
   return (
     <LogoStyled
       variants={LogoAnimation}

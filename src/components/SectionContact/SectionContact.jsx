@@ -1,6 +1,7 @@
 import React, { Suspense } from "react";
 import SectionContactStyled from "./SectionContact.styled";
 import Text from "../Text/Text";
+import {imageResource} from "../../assets/imageResource"
 import {FlexContainer} from "../Containers/Flex/FlexContainer";
 import { Canvas } from "@react-three/fiber";
 import Text3DMesh from "../Mesh/Text3D/Text3DMesh";
@@ -40,9 +41,12 @@ function SectionContact() {
         </Text>
         <Text
         variants={listChildrenAnimation}
+          td = "underline"
           type="a"
           color="var(--clr_primary_color)"
           text="Check my resume here!"
+          link = {imageResource.Resume}
+          target = "_blank"
         />
         <Text link ="mailto:bmhuyquoc104@gmail.com" variants={listChildrenAnimation} size="1rem" text="Say Hi 👋" type="button-link" />
       </FlexContainer>

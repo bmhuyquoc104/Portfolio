@@ -25,7 +25,7 @@ function Text({
     return (
       <LinkStyled
         href={link}
-        td ={td}
+        td={td}
         target={target}
         variants={variants}
         color={color}
@@ -38,7 +38,15 @@ function Text({
     return (
       <ButtonLinkStyled
         href={link}
+        whileHover={{
+          backgroundColor: "rgba(240, 165, 0, 0.3)",
+          transition: {
+            duration: "0.3",
+            type: "tween",
+          },
+        }}
         variants={variants}
+        target = {target}
         size={size}
         direction={direction}
       >

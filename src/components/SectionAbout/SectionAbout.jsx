@@ -1,4 +1,5 @@
 import SectionAboutStyled from "./SectionAbout.styled";
+import {motion} from "framer-motion"
 import Text from "../Text/Text";
 import { FlexContainer } from "../Containers/Flex/FlexContainer";
 import { imageResource } from "../../assets/imageResource";
@@ -7,6 +8,7 @@ import {
   listChildrenAnimation,
 } from "../../style/AnimationStyled";
 import Image from "../Containers/ImageContainer/Image";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 function SectionAbout() {
   return (
@@ -29,14 +31,20 @@ function SectionAbout() {
               color="var(--clr_primary_color)"
               type="a"
               text="Frontend Mentor"
+              link="https://www.frontendmentor.io/profile/bmhuyquoc104"
+              target="_blank"
+              td="underline"
             />
           </span>{" "}
-          and
+          and{" "}
           <span>
             <Text
               color="var(--clr_primary_color)"
               type="a"
-              text=" Dev Challenges"
+              text="Dev Challenges"
+              target="_blank"
+              link="https://devchallenges.io/portfolio/bmhuyquoc104"
+              td="underline"
             />
           </span>
           .
@@ -52,12 +60,23 @@ function SectionAbout() {
           UX/UI website. I am also interested in working with other passion
           developers on a big project to learn from them.
         </Text>
-        <Text
+        {/* <Text
           variants={listChildrenAnimation}
           color="var(--clr_primary_color)"
           type="a"
           text="Let's make something special!"
-        />
+        /> */}
+        <motion.div variants={listChildrenAnimation}>
+          <Link
+            smooth={true}
+            offset={-50}
+            duration={500}
+            className="scroll-link"
+            to="contact"
+          >
+            Let's make something special!
+          </Link>
+        </motion.div>
       </FlexContainer>
       <Image>
         <img src={imageResource.Logo} alt="My Photo" />
