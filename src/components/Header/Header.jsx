@@ -6,8 +6,10 @@ import { AiOutlineMenu } from "react-icons/ai";
 import { IconStyled } from "../../style/ConstantStyled";
 import HamburgerHeader from "./HamburgerHeader/HamburgerHeader";
 import { AnimatePresence } from "framer-motion";
+import Toggle from "../Toggle/Toggle";
+import { FlexContainer } from "../Containers/Flex/FlexContainer";
 
-function Header({ variants }) {
+function Header({ variants, theme, themeToggler,toggleDirection }) {
   const headerRef = useRef(null);
   const changeBackground = () => {
     if (window.scrollY >= 10) {
@@ -24,8 +26,11 @@ function Header({ variants }) {
   const [isToggle, setIsToggle] = useState(false);
   return (
     <HeaderStyled ref={headerRef} variants={variants}>
-      <Logo />
-      <Navbar/>
+      <FlexContainer justifyContent="flex-start" alignItems="center">
+        <Logo />
+        <Toggle toggleDirection = {toggleDirection} theme={theme} themeToggler={themeToggler} />
+      </FlexContainer>
+      <Navbar />
       <AiOutlineMenu style={IconStyled} onClick={() => setIsToggle(true)} />
       <AnimatePresence mode="wait">
         {isToggle && (

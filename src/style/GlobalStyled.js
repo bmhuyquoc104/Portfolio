@@ -49,6 +49,7 @@ const GlobalStyled = createGlobalStyle`
     min-height:100vh;
     padding:0 3em;
     scroll-behavior: smooth;
+    transition: background 0.3s linear;
     @media (max-width:480px){
       padding: 0 1.5em;
     }

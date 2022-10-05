@@ -5,8 +5,18 @@ const IconStyled = {
 };
 
 const SocialIconStyled = {
-  color:"inherit",
+  color: "inherit",
   fontSize: "1.2rem",
 };
 
-export { IconStyled,SocialIconStyled };
+const MoonIconStyled = {
+  color: "#000",
+  fontSize: "1rem",
+};
+
+const SunIconStyled = {
+  color: "#fff",
+  fontSize: "1rem",
+};
+
+export { IconStyled, SocialIconStyled, MoonIconStyled, SunIconStyled };

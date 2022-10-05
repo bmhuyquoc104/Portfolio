@@ -10,22 +10,25 @@ import SectionSkills from "./components/SectionSkills/SectionSkills";
 import SectionProjects from "./components/SectionProjects/SectionProjects";
 import SectionContact from "./components/SectionContact/SectionContact";
 
-
 function App() {
-  const [theme, themeToggler] = useTheme();
-  
+  const [theme, toggleDirection, themeToggler] = useTheme();
+
   const themeMode = theme === "lightTheme" ? lightTheme : darkTheme;
 
   return (
     <ThemeProvider theme={themeMode}>
       <GlobalStyled />
-      <Header />
+      <Header
+        toggleDirection={toggleDirection}
+        themeToggler={themeToggler}
+        theme={theme}
+      />
       <SectionHome />
       <SocialContact />
-      <SectionAbout/>
-      <SectionSkills/>
-      <SectionProjects/>
-      <SectionContact/>
+      <SectionAbout />
+      <SectionSkills />
+      <SectionProjects />
+      <SectionContact />
     </ThemeProvider>
   );
 }
