@@ -7,6 +7,7 @@ const SocialContactStyled = styled(motion.aside)`
   width: 60px;
   align-items: center;
   position: fixed;
+  z-index:10;
   top: 30%;
   left: 2em;
   justify-content: center;
