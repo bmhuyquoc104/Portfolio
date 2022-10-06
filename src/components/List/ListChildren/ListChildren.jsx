@@ -9,6 +9,7 @@ function ListChildren({
   br,
   fz,
   isActive,
+  color,
 }) {
   return (
     <ListChildrenStyled
@@ -19,6 +20,7 @@ function ListChildren({
       fz={fz}
       onClick={onClick}
       variants={variants}
+      color={color}
     >
       {children}
     </ListChildrenStyled>

@@ -8,6 +8,9 @@ const HamburgerHeaderStyled = styled(motion.div)`
   @media (max-width: 480px) {
     padding: 3em 1.5em 2em 1.5em;
   }
+  @media (min-width: 768px) {
+    display:none;
+  }
 `;
 
 export default HamburgerHeaderStyled;

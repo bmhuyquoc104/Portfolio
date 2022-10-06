@@ -6,7 +6,6 @@ function Link({ children, href, target }) {
     <LinkStyled
       target={target}
       href={href}
-      whileHover={{ scaleY: 1.2, color: "var(--clr_primary_color)" }}
     >
       {children}
     </LinkStyled>

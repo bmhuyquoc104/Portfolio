@@ -38,8 +38,8 @@ function ProjectContainer({
       <AnimatePresence mode="wait">
         {isHover && (
           <AbsoluteFlexContainer className={id.includes("mobile") ? "mobile" : ""}>
-            <Text type="h3" text={name} />
-            <Text type="p">{description}</Text>
+            <Text type="h3" color = "white" text={name} />
+            <Text color = "var(--clr_header_color_dark)" type="p">{description}</Text>
             <UnorderedList
               p="0"
               gap="0.5em"
@@ -53,7 +53,7 @@ function ProjectContainer({
                   p="0.25em 1em"
                   br="50px"
                   bg="rgb(105,104,105)"
-                  color="white"
+                  color="var(--clr_header_color_dark)"
                 >
                   {technology}
                 </ListChildren>

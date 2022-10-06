@@ -11,7 +11,7 @@ const HeaderStyled = styled(motion.header)`
   top: 0;
   left: 0;
   padding: 1em 3em;
-
+  transition:background 0.3s linear;
   &.active {
     background-color: ${({ theme }) => theme.navbar.backgroundColor};
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5); 

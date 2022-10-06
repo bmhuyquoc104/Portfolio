@@ -8,7 +8,7 @@ const ListChildrenStyled = styled(motion.li)`
   font-family: var(--font_playFair);
   font-size: ${({ fz }) => fz || "0.8125rem"};
   font-weight: 300;
-  color: ${({ theme }) => theme.header.color};
+  color: ${({ theme,color }) => color == undefined ? theme.header.color : color};
   padding: ${({ p }) => p || "0"};
   background-color: ${({ bg }) => bg || ""};
   border-radius: ${({ br }) => br || "0"};

@@ -9,11 +9,52 @@ const Heading1Styled = styled(motion.h1)`
   color: ${({ theme }) => theme.header.color};
   display: flex;
   gap: 0.2em;
-
-  .words > * {
+  .word {
+    transition: all 0.3s ease-out;
     display: inline-block;
-
     letter-spacing: -0.04em;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+  }
+  .word:hover {
+    animation-name: rubberBand;
+    color: var(--clr_primary_color);
+  }
+
+  @keyframes rubberBand {
+    from {
+      transform: scale3d(1, 1, 1);
+    }
+
+    30% {
+      transform: scale3d(1.25, 0.75, 1);
+    }
+
+    40% {
+      transform: scale3d(0.75, 1.25, 1);
+    }
+
+    50% {
+      transform: scale3d(1.15, 0.85, 1);
+    }
+
+    65% {
+      transform: scale3d(0.95, 1.05, 1);
+    }
+
+    75% {
+      transform: scale3d(1.05, 0.95, 1);
+    }
+
+    to {
+      transform: scale3d(1, 1, 1);
+    }
+  }
+
+  .rubberBand {
+    -webkit-animation-name: rubberBand;
+    animation-name: rubberBand;
   }
 `;
 
@@ -36,7 +77,8 @@ const Heading3Styled = styled(motion.h3)`
   font-family: var(--font_sans);
   font-size: ${({ fz }) => fz || "clamp(1rem, 0.8rem + 1vw, 2rem)"};
   font-weight: 900;
-  color: ${({ theme }) => theme.header.color};
+  color: ${({ theme, color }) =>
+    color == undefined ? theme.header.color : color};
 `;
 
 const Heading4Styled = styled(motion.h4)`
@@ -68,7 +110,7 @@ const ButtonLinkStyled = styled(motion.a)`
   border-radius: 4px;
   border: 1px solid var(--clr_primary_color);
   padding: 1em 1.25em;
-  width: max-content !important;  
+  width: max-content !important;
   cursor: pointer;
   text-decoration: none;
 `;
@@ -78,7 +120,8 @@ const ParagraphStyled = styled(motion.p)`
   font-size: clamp(0.8rem, 0.76rem + 0.19999999999999996vw, 1rem);
   line-height: 1.7em;
   font-weight: 300;
-  color: ${({ theme }) => theme.text.color};
+  color: ${({ theme, color }) =>
+    color == undefined ? theme.header.color : color};
 `;
 
 export {

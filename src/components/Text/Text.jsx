@@ -55,26 +55,20 @@ function Text({
     );
   } else if (type == "h1") {
     const textArr = text.split(" ");
-
     return (
       <Heading1Styled>
         {textArr.map(function (words, index) {
           return (
             <div className="words" key={index}>
               {words.split("").map((char, index) => (
-                <motion.span
+                <span
                   variants={variants}
-                  whileHover={{ scale: 1.2, color: "var(--clr_primary_color)" }}
-                  transition={{
-                    type: "spring",
-                    stiffness: 300,
-                    duration: 0.3,
-                  }}
                   aria-hidden="true"
                   key={index}
+                  className = "word"
                 >
                   {char}
-                </motion.span>
+                </span>
               ))}
             </div>
           );
@@ -82,7 +76,7 @@ function Text({
       </Heading1Styled>
     );
   } else if (type == "p") {
-    return <ParagraphStyled variants={variants}>{children}</ParagraphStyled>;
+    return <ParagraphStyled color = {color} variants={variants}>{children}</ParagraphStyled>;
   } else if (type == "h2") {
     const textArr = text.split(" ");
 
@@ -112,7 +106,7 @@ function Text({
       </Heading2Styled>
     );
   } else if (type == "h3") {
-    return <Heading3Styled variants={variants}>{text}</Heading3Styled>;
+    return <Heading3Styled color = {color} variants={variants}>{text}</Heading3Styled>;
   } else if (type == "h4") {
     return <Heading4Styled variants={variants}>{text}</Heading4Styled>;
   }

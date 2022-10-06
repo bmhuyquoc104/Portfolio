@@ -11,7 +11,7 @@ function Toggle({ theme, themeToggler,toggleDirection }) {
     <ToggleStyled onTap={themeToggler}>
       <motion.div
         onTap={themeToggler}
-        style={{ backgroundColor: theme === "darkTheme" ? "#000" : "#fff" }}
+        style={{ backgroundColor: theme === "darkTheme" ? "#000000" : "#ffffff" }}
         className="background"
       >
         <motion.div
@@ -24,7 +24,7 @@ function Toggle({ theme, themeToggler,toggleDirection }) {
             stiffness: 700,
             damping: 30,
           }}
-          style={{ backgroundColor: theme === "darkTheme" ? "#ffc300" : "#ffc300" }}
+          style={{ backgroundColor: theme === "darkTheme" ? "#ff971d" : "#ff971d" }}
           className="circle"
         >
           {theme === "darkTheme" ? (
