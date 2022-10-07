@@ -1,4 +1,4 @@
-import React from "react";
+import { useRef, useEffect } from "react";
 import ProjectDetailContainerStyled from "./ProjectDetailContainer.styled";
 import { FlexContainer } from "../Flex/FlexContainer";
 import { IconStyled } from "../../../style/ConstantStyled";
@@ -20,8 +20,21 @@ function ProjectDetailContainer({
   setLearnMore,
   id,
 }) {
+  useEffect(() => {
+    const handleClickOutSide = (event) => {
+      if (sectionRef.current && !sectionRef.current.contains(event.target)) {
+        setLearnMore(false);
+      }
+    };
+    document.addEventListener("click", handleClickOutSide, true);
+    return () => {
+      document.removeEventListener("click", handleClickOutSide, true);
+    };
+  }, [setLearnMore]);
+  const sectionRef = useRef(null);
   return (
     <ProjectDetailContainerStyled
+      ref={sectionRef}
       variants={LinearXDirection}
       initial="hidden"
       animate="show"
@@ -49,11 +62,7 @@ function ProjectDetailContainer({
             td="underline"
             type="a"
             link={id.includes("mobile") ? repo : website}
-            text={
-              id.includes("mobile")
-                ? `Open GitHub`
-                : `Visit Website`  
-            }
+            text={id.includes("mobile") ? `Open GitHub` : `Visit Website`}
           />
           {id.includes("mobile") ? (
             <>
