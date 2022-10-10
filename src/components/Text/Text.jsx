@@ -59,18 +59,18 @@ function Text({
       <Heading1Styled>
         {textArr.map(function (words, index) {
           return (
-            <div className="words" key={index}>
+            <motion.div className="words" key={index}>
               {words.split("").map((char, index) => (
-                <span
+                <motion.span
                   variants={variants}
                   aria-hidden="true"
                   key={index}
                   className = "word"
                 >
                   {char}
-                </span>
+                </motion.span>
               ))}
-            </div>
+            </motion.div>
           );
         })}
       </Heading1Styled>

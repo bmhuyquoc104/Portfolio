@@ -50,7 +50,7 @@ function SectionAbout() {
           .
         </Text>
         <Text type="p">
-          Problem-solver, autonomous worker, and high-detail oriented.
+          Problem-solver, autonomous worker, eager to learn new tech and high-detail oriented.
           Enthusiasm for soccer, history, TV shows, movies, and books. A
           third-year software engineering student who will graduate the
           following year.
@@ -60,12 +60,6 @@ function SectionAbout() {
           UX/UI website. I am also interested in working with other passion
           developers on a big project to learn from them.
         </Text>
-        {/* <Text
-          variants={listChildrenAnimation}
-          color="var(--clr_primary_color)"
-          type="a"
-          text="Let's make something special!"
-        /> */}
         <motion.div variants={listChildrenAnimation}>
           <Link
             smooth={true}

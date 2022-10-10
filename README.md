@@ -206,7 +206,7 @@ Run the project locally
 <!-- Usage -->
 ## :eyes: Usage
 
-This project can be used for any portfolio template to introduce yourself and your works.
+This project can be used as an portfolio template to introduce yourself and your works.
 
 <!-- Contact -->
 ## :handshake: Contact
