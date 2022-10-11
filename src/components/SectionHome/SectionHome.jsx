@@ -16,7 +16,7 @@ function SectionHome() {
       <Text variants={heading2Animation} type="h1" text="I'm Huy." />
       <Text variants={heading2Animation} type="h1" text="Software Engineer." />
       <Text variants={listChildrenAnimation} type="p">
-        I'm a third year Software Engineering student in RMIT who have a genuine
+        I'm a final year Software Engineering student in RMIT who have a genuine
         passion for creating user-friendly full-stack websites. I have
         experienced in Machine Learning and Mobile Application.
       </Text>

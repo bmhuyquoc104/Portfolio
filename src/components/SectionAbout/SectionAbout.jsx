@@ -52,7 +52,7 @@ function SectionAbout() {
         <Text type="p">
           Problem-solver, autonomous worker, eager to learn new tech and high-detail oriented.
           Enthusiasm for soccer, history, TV shows, movies, and books. A
-          third-year software engineering student who will graduate the
+          final year software engineering student who will graduate the
           following year.
         </Text>
         <Text type="p">
