@@ -27,27 +27,23 @@ function Content() {
   );
   return (
     <group ref={ref}>
-      <Box text="JavaScript" position={[0, 1, 1]} />
+      <Box text="Python" position={[0, 1, 1]} />
       <Box text="ReactJS" position={[0, -1, 1]} />
       <Box text="CSS" position={[0, 1, -1]} />
       <Box text="HTML" position={[0, 1, 0]} />
-      <Box text="ExpressJS" position={[0, 0, 1]} />
-      <Box text="MongoDB" position={[0, 2, 0]} />
+      <Box text="FastAPI" position={[0, 0, 1]} />
+      <Box text="PostgreSQL" position={[0, 2, 0]} />
       <Box text="SQL" position={[0, 2, 1]} />
       <Box text="TypeScript" position={[-2, 1, -1]} />
       <Box text="Styled Components" position={[-1, 0, -1]} />
-      <Box text="Redux Toolkit" position={[-2, 2, -1]} />
-      <Box text="Framer Motion" position={[-2, 0, 1]} />
-      <Box text="React Query" position={[-2, 1, 1]} />
-      <Box text="React Router" position={[-2, -1, 1]} />
+      <Box text="Redis" position={[-2, 2, -1]} />
+      <Box text="Google Cloud Platform" position={[-2, 0, 1]} />
+      <Box text="Airflow" position={[-2, 1, 1]} />
+      <Box text="Bigquery" position={[-2, -1, 1]} />
       <Box text="Git" position={[-1, -1, -1]} />
-      <Box text="AWS" position={[-1, 0, 1]} />
-      <Box text="MUI" position={[-1, 1, 1]} />
-      <Box text="Machine Learning" position={[-1, 1, -1]} />
-      <Box text="Swift" position={[-1, 1, 0]} />
-      <Box text="Android" position={[-1, -1, 0]} />
-      <Box text="Firebase" position={[-1, 0, 0]} />
-      <Box text="React Form" position={[-1, 2, -1]} />
+      <Box text="Docker" position={[-1, 0, 1]} />
+      <Box text="Terraform" position={[-1, 1, 1]} />
+      <Box text="Pydantic" position={[-1, 1, -1]} />
     </group>
   );
 }

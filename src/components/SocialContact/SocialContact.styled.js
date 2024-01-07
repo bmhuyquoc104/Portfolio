@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 
 const SocialContactStyled = styled(motion.aside)`
   display: flex;
-  min-height: 40vh;
   width: 60px;
   align-items: center;
   position: fixed;

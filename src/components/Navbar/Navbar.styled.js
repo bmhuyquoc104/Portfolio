@@ -32,6 +32,7 @@ const NavbarStyled = styled(motion.nav)`
       direction === "column" ? "1rem" : "0.8125rem"};
     color: var(--clr_primary_color);
     display: flex;
+    margin-top:auto;
     align-items: flex-end;
     margin-right: ${({ direction }) =>
       direction === "column" ? "0" : "0.5rem"};

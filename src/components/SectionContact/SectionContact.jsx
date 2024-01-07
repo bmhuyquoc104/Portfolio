@@ -27,14 +27,14 @@ function SectionContact() {
           text="Contact me"
         />
         <Text type="p">
-          I'm interested in working with other people on full-stack project. If
+          I'm interested in working with other people on interesting project. If
           you have any questions or just want to say hi, please do not hesitate
           to contact me via my email.
         </Text>
         <Text type="p">
           I'm currently looking for an{" "}
           <span>
-            <Text text="intern" type="a" color="var(--clr_primary_color)" />
+            <Text text="software engineering" type="a" color="var(--clr_primary_color)" />
           </span>{" "}
           job. If you have any opportunities for me, please feel free to contact
           me, I'll get back to you ASAP!

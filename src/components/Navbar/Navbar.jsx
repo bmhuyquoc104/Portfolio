@@ -5,10 +5,11 @@ import {
   listParentAnimation,
   listChildrenAnimation,
 } from "../../style/AnimationStyled";
-import {imageResource} from "../../assets/imageResource"
+import { imageResource } from "../../assets/imageResource"
 import { motion } from "framer-motion";
 
 function Navbar({ direction, setIsToggle }) {
+  const NAVBAR_OPTIONS = ["About", "Skills", "Experiences", "Projects", "Contact"]
   return (
     <NavbarStyled
       variants={listParentAnimation}
@@ -17,58 +18,21 @@ function Navbar({ direction, setIsToggle }) {
       direction={direction}
     >
       <motion.ol>
-        <motion.li variants={listChildrenAnimation}>
-          <Link
-            onClick={
-              direction == "column" ? () => setIsToggle(false) : () => {}
-            }
-            to="about"
-            smooth={true}
-            offset={-70}
-            duration={500}
-          >
-            About
-          </Link>
-        </motion.li>
-        <motion.li variants={listChildrenAnimation}>
-          <Link
-            onClick={
-              direction == "column" ? () => setIsToggle(false) : () => {}
-            }
-            to="skills"
-            smooth={true}
-            offset={-70}
-            duration={500}
-          >
-            Skills
-          </Link>
-        </motion.li>
-        <motion.li variants={listChildrenAnimation}>
-          <Link
-            onClick={
-              direction == "column" ? () => setIsToggle(false) : () => {}
-            }
-            to="projects"
-            smooth={true}
-            offset={-70}
-            duration={500}
-          >
-            Projects
-          </Link>
-        </motion.li>
-        <motion.li variants={listChildrenAnimation}>
-          <Link
-            onClick={
-              direction == "column" ? () => setIsToggle(false) : () => {}
-            }
-            to="contact"
-            smooth={true}
-            offset={-70}
-            duration={500}
-          >
-            Contact
-          </Link>
-        </motion.li>
+        {NAVBAR_OPTIONS.map((option, index) =>
+          <motion.li key={index} variants={listChildrenAnimation}>
+            <Link
+              onClick={
+                direction == "column" ? () => setIsToggle(false) : () => { }
+              }
+              to={option.toLowerCase()}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
+              {option}
+            </Link>
+          </motion.li>)}
+
       </motion.ol>
       <motion.div variants={listChildrenAnimation}>
         <Text
@@ -76,8 +40,8 @@ function Navbar({ direction, setIsToggle }) {
           size="0.8125rem"
           type="button-link"
           text="Resume"
-          link = {imageResource.Resume}
-          target = "_blank"
+          link={imageResource.Resume}
+          target="_blank"
         />
       </motion.div>
     </NavbarStyled>

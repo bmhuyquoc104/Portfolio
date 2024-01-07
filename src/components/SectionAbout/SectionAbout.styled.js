@@ -5,7 +5,7 @@ const SectionAboutStyled = styled(motion.section)`
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding: 3em 0 1em 3em;
+  padding: 0;
   width: 85%;
 
   .scroll-link {

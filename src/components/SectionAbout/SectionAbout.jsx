@@ -1,5 +1,5 @@
 import SectionAboutStyled from "./SectionAbout.styled";
-import {motion} from "framer-motion"
+import { motion } from "framer-motion"
 import Text from "../Text/Text";
 import { FlexContainer } from "../Containers/Flex/FlexContainer";
 import { imageResource } from "../../assets/imageResource";
@@ -13,7 +13,7 @@ import { Link, animateScroll as scroll } from "react-scroll";
 function SectionAbout() {
   return (
     <SectionAboutStyled id="about">
-      <FlexContainer direction="column" alignItems="flex-start" gap="1.5em">
+      <FlexContainer direction="column" alignItems="flex-start" gap="1em">
         <Text
           variants={heading2Animation}
           color="var(--clr_primary_color)"
@@ -50,15 +50,20 @@ function SectionAbout() {
           .
         </Text>
         <Text type="p">
-          Problem-solver, autonomous worker, eager to learn new tech and high-detail oriented.
-          Enthusiasm for soccer, history, TV shows, movies, and books. A
-          final year software engineering student who will graduate the
-          following year.
+          From October 2022 to the present, my experience with {" "}
+          <Text
+            td="underline"
+            type="a"
+            color="var(--clr_primary_color)"
+            text="Athena Studio"
+            link="https://athena.studio/"
+            target="_blank"
+          /> 
+          {" "}
+          has been invaluable, expanding my knowledge and igniting a newfound passion for designing and addressing business challenges. This journey has provided extensive exposure to the mobile game industry, enhancing my understanding of its processes. Additionally, I've broadened my skill set in backend development, cloud development, and data engineering, gaining valuable insights and expertise.
         </Text>
         <Text type="p">
-          My main focus these days is building an accessible, scalable, great
-          UX/UI website. I am also interested in working with other passion
-          developers on a big project to learn from them.
+          Outside of working hours, I am deeply passionate about staying current with the latest trends in the software engineering industry through reading of tech news. I find joy in updating and enriching my programming skills by delving into technical books, particularly those that broaden my knowledge. Additionally, I enjoy tutoring others as it not only reinforces my understanding but also allows me to share my knowledge with fellow learners.
         </Text>
         <motion.div variants={listChildrenAnimation}>
           <Link

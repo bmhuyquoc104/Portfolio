@@ -9,7 +9,7 @@ const ProjectContainerStyled = styled(motion.div)`
     width: 100%;
     border-radius: 5px;
     height: 100%;
-    object-fit: cover;
+    object-fit: fill;
   }
   .mobile{
     width: 100%;

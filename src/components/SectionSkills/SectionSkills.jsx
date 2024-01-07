@@ -13,9 +13,10 @@ import ListChildren from "../List/ListChildren/ListChildren";
 import { OrbitControls } from "@react-three/drei";
 
 function SectionSkills() {
+  const SKILLS = ["Python", "FastAPI", "GCP", "PostgreSQL", "Redis", "Airflow"]
   return (
     <SectionSkillStyled id="skills">
-      <FlexContainer direction="column" alignItems="flex-start" gap="1.5em">
+      <FlexContainer direction="column" alignItems="flex-start" gap="1em">
         <Text
           variants={heading2Animation}
           color="var(--clr_primary_color)"
@@ -23,22 +24,13 @@ function SectionSkills() {
           text="My Skills"
         />
         <Text type="p">
-          My main area is full-stack development. I have been building several
-          small, medium web projects. My criteria for coding style are clean,
-          easy to understand and reusable for future improvements and
-          maintenance. Most of my websites are written in {" "}
-          <span>
-            <Text color="var(--clr_primary_color)" type="a" text="ReactJS" />
-          </span>{" "}
-          and its ecosystem.
+          I am capable of designing and proposing thoughtful solutions to handle business problems. I have understanding of database modeling, writing clean, high-performance, and maintainable code with a reliable suite of test cases. I adhere to best practices in creating robust APIs. I have a solid understanding of cloud computing, specially, Google Cloud Platform(GCP). I experienced in deploying code to production using Docker and Terraform.
         </Text>
         <Text type="p">
-          My favorite React Stack is TypeScript, React Query, Redux Toolkit,
-          React Hook Form, React Router and Styled Components. For the backend,
-          I interested in using ExpressJS + MongoDB/SQL or Firebase.
+          I have experience creating data pipeline systems using Airflow. I understand fundamental data engineer concepts, experienced in crafting numerous queries to address complex data challenges, and my work in the mobile game industry has provided me with insights into effectively analyzing data in this specific domain.
         </Text>
         <Text type="p">
-          I also have experiences in mobile development and machine learning.
+          I also have a skill for front-end development with a solid grasp of building responsive website using React and TypeScript.
         </Text>
         <FlexContainer direction="column" alignItems="flex-start">
           <Text type="p">
@@ -51,24 +43,10 @@ function SectionSkills() {
             gap="0.5em"
             childrenWidth="45%"
           >
-            <ListChildren variants={listChildrenAnimation}>
-              <span>&#8226;</span> Express
-            </ListChildren>
-            <ListChildren variants={listChildrenAnimation}>
-              <span>&#8226;</span> React (+ecosystem)
-            </ListChildren>
-            <ListChildren variants={listChildrenAnimation}>
-              <span>&#8226;</span> JavaScript (ES6+)
-            </ListChildren>
-            <ListChildren variants={listChildrenAnimation}>
-              <span>&#8226;</span> TypeScript
-            </ListChildren>
-            <ListChildren variants={listChildrenAnimation}>
-              <span>&#8226;</span> MongoDB
-            </ListChildren>
-            <ListChildren variants={listChildrenAnimation}>
-              <span>&#8226;</span> Firebase
-            </ListChildren>
+            {SKILLS.map((skill, index) =>
+              <ListChildren key={index} variants={listChildrenAnimation}>
+                <span>&#8226;</span> {skill}
+              </ListChildren>)}
           </UnorderedList>
         </FlexContainer>
       </FlexContainer>

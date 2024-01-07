@@ -22,7 +22,7 @@ const HeaderStyled = styled(motion.header)`
     display: none;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     & > :last-child {
       display: revert;
     }

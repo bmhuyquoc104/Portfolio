@@ -5,17 +5,18 @@ const SectionHomeStyled = styled(motion.section)`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 1em;
-  padding: 3em 3em 1em 3em;
-  width: 85%;
+  align-items: center;
+  gap: 4em;
+  padding: 3em 2em;
+  width: 100%;
   min-height: 100vh;
-  & > :nth-child(4) {
-    width: 50%;
-    margin-top: 1em;
+  .home-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: min(42em, 100%);
   }
-  & > :last-child {
-    margin-top: 1em;
-  }
+
 
   .scroll-link {
     font-family: var(--font_sans);
@@ -30,14 +31,16 @@ const SectionHomeStyled = styled(motion.section)`
     /* background-color:transparent; */
     cursor: pointer;
     text-decoration: none;
-    :hover{
-      background-color:rgba(240, 165, 0, 0.3);
+    :hover {
+      background-color: rgba(240, 165, 0, 0.3);
     }
   }
 
   @media (max-width: 950px) {
-    & > :nth-child(4) {
-      width: 70%;
+    .home-info {
+      & > :nth-child(4) {
+        width: 70%;
+      }
     }
   }
   @media (max-width: 768px) {

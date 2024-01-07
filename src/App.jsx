@@ -9,6 +9,7 @@ import SectionAbout from "./components/SectionAbout/SectionAbout";
 import SectionSkills from "./components/SectionSkills/SectionSkills";
 import SectionProjects from "./components/SectionProjects/SectionProjects";
 import SectionContact from "./components/SectionContact/SectionContact";
+import SectionExperience from "./components/SectionExperience/SectionExperience";
 
 function App() {
   const [theme, toggleDirection, themeToggler] = useTheme();
@@ -27,6 +28,7 @@ function App() {
       <SocialContact />
       <SectionAbout />
       <SectionSkills />
+      <SectionExperience/>
       <SectionProjects />
       <SectionContact />
     </ThemeProvider>

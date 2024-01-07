@@ -6,7 +6,7 @@ const projects = {
       id: "web-6",
       name: "Invoice Management",
       description:
-        "Help the business to manage and track all the invoices' status of a customer.",
+        "Manage and track all the invoices' status of a customer.",
       about:
         "A gorgeous and expertly website that supports the business to track the current status of invoice from the customer. This website also provides sending new invoice to the client.",
       technologies: [
@@ -15,11 +15,6 @@ const projects = {
         "Styled Components",
         "Express",
         "MongoDB",
-        "Framer Motion",
-        "Redux",
-        "React Hook Form",
-        "React Query",
-        "React Router",
       ],
       image: `${imageResource.InvoiceProject}`,
       website: "https://bmhuyquoc-invoice-website.netlify.app/",
@@ -29,7 +24,7 @@ const projects = {
       id: "web-0",
       name: "Shoppingify",
       description:
-        "Shoppingify allows you take your shopping list wherever you go.",
+        "Take your shopping list wherever you go.",
       about:
         "A gorgeous and expertly website that supports the client to buy the product and manage their history transaction. The website also helps the business to track their best-selling items by a chart and customize the supplying products. ",
       technologies: [
@@ -38,46 +33,22 @@ const projects = {
         "TypeScript",
         "Express",
         "MongoDB",
-        "Framer Motion",
-        "Redux Toolkit",
-        "React Hook Form",
-        "React Query",
-        "React Router",
       ],
       image: `${imageResource.ShoppingifyImage}`,
       website: "https://bmhuyquoc104-shoppingify.netlify.app/",
       repo: "https://github.com/bmhuyquoc104/shoppingify",
     },
     {
-      id: "web-1",
-      name: "Countries Discovery",
-      description: "Explore all countries' information from your website.",
-      about:
-        "A responsive website that built to let a user research and gain knowledge of all countries'data on the world. The product provides customize search and filter option for user to get access to any countries. ",
-      technologies: [
-        "React",
-        "Styled Components",
-        "React Query",
-        "React Router",
-      ],
-      image: `${imageResource.CountryWebsite}`,
-      website: "https://bmhuyquoc104-countries-website.netlify.app/",
-      repo: "https://github.com/bmhuyquoc104/countries-website",
-    },
-    {
       id: "web-2",
-      name: "Software Engineer Jobs Discovery",
+      name: "Jobs Finding",
       description: "Find you dream jobs by your strengths.",
       about:
         "A responsive website that built to let a user find your wanted software job by filtering their skills or position.",
       technologies: [
         "React",
-        "NodeJs",
         "Mongoose",
-        "ExpressJS",
         "Material UI",
         "Redux Toolkit",
-        "React Query",
         "ExpressJS",
       ],
       image: `${imageResource.JobWebsiteImage}`,
@@ -99,7 +70,7 @@ const projects = {
       id: "web-4",
       name: "Bamboo Monitor Riser",
       description:
-        "A gorgeous and expertly built monitor stand that will ease neck and eye pain.",
+        "A gorgeous and expertly built monitor.",
       about:
         "Your screen will be raised to a more comfortable viewing height with the Bamboo Monitor Riser, a strong and fashionable base. By setting your monitor at eye level, you may find that your posture and level of comfort at work increase, which will keep you more attentive to the task at hand.The artisan-crafted simplicity of the design adds more desk space beneath your computer so that notepads, pens, and USB sticks can be kept underneath the stand.",
       technologies: ["React", "Styled Components"],
@@ -111,7 +82,7 @@ const projects = {
       id: "web-7",
       name: "Interactive Comment",
       description:
-        "Show the interactive comments from the client in social website",
+        "Interactive comments in social website",
       about:
         "A simple website to display the simple interact between users. This website allows the client to like, dislike, reply and add new comment to communicate with others.",
       technologies: ["React", "Styled Components", "React Hook Form"],
@@ -119,28 +90,8 @@ const projects = {
       website: "https://bmhuyquoc104.github.io/react-interactive-comments/",
       repo: "https://github.com/bmhuyquoc104/react-interactive-comments",
     },
-    {
-      id: "web-5",
-      name: "Loopstudios",
-      description: "Help the business to introduce their company and products",
-      about:
-        "A gorgeous and expertly landing website to display the information of the loopstudios company",
-      technologies: ["React", "Styled Components", "Framer Motion"],
-      image: `${imageResource.LoopsStudioWebsiteImage}`,
-      website: "https://bmhuyquoc104.github.io/loopstudio-landing-page-React2/",
-      repo: "https://github.com/bmhuyquoc104/loopstudio-landing-page-React2",
-    },
-    {
-      id: "web-8",
-      name: "Snap",
-      description: "Help the business to introduce their company and products",
-      about:
-        "A gorgeous and expertly landing website to display the information of the snap company",
-      technologies: ["React", "Material UI"],
-      image: `${imageResource.SnapWebsiteImage}`,
-      website: "https://bmhuyquoc104.github.io/dropdown-nav-website/",
-      repo: "https://github.com/bmhuyquoc104/dropdown-nav-website",
-    },
+
+  
   ],
   mobile: [
     {
