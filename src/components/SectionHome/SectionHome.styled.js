@@ -17,7 +17,6 @@ const SectionHomeStyled = styled(motion.section)`
     width: min(42em, 100%);
   }
 
-
   .scroll-link {
     font-family: var(--font_sans);
     font-size: ${({ size, direction }) =>
@@ -33,6 +32,12 @@ const SectionHomeStyled = styled(motion.section)`
     text-decoration: none;
     :hover {
       background-color: rgba(240, 165, 0, 0.3);
+    }
+  }
+
+  @media (min-width: 1560px) {
+    .home-info {
+      width: min(55em, 100%);
     }
   }
 
