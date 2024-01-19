@@ -11,7 +11,7 @@ const FlexContainerStyled = styled(motion.div)`
   cursor: ${({ cursor }) => cursor || ""};
 `;
 
-const AbsoluteFlexContainerStyled = styled(motion.div)`
+const AbsoluteFlexContainerStyled = styled.div`
   position: absolute;
   top: 0;
   bottom: 0;
@@ -37,7 +37,7 @@ const AbsoluteFlexContainerStyled = styled(motion.div)`
     gap:1.25em;
     padding:0 2em;
     justify-content:center;
-      /* align-items:center; */
+      align-items:center;
     background-color:${({ theme }) => theme.navbar.backgroundColor};
   }
 `;
