@@ -20,7 +20,7 @@ function Text3DMesh() {
             bevelSize={0.05}
             letterSpacing={-0.025}
           >
-            {`bmhuyquoc104\n@gmail.com`}
+            {`huy.vo.softwareengineer@gmail.com\n@gmail.com`}
             <meshNormalMaterial />
           </Text3D>
         </Float>

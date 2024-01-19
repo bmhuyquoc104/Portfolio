@@ -5,8 +5,7 @@ import { RiSunFill } from "react-icons/ri";
 import { MoonIconStyled, SunIconStyled } from "../../style/ConstantStyled";
 import { motion } from "framer-motion";
 function Toggle({ theme, themeToggler,toggleDirection }) {
-  console.log(toggleDirection);
-  console.log(theme);
+
   return (
     <ToggleStyled onTap={themeToggler}>
       <motion.div

@@ -1,4 +1,5 @@
 import GlobalStyled from "./style/GlobalStyled";
+import { useEffect } from "react";
 import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme } from "./style/Theme";
 import useTheme from "./hooks/useTheme";
@@ -10,10 +11,15 @@ import SectionSkills from "./components/SectionSkills/SectionSkills";
 import SectionProjects from "./components/SectionProjects/SectionProjects";
 import SectionContact from "./components/SectionContact/SectionContact";
 import SectionExperience from "./components/SectionExperience/SectionExperience";
+import logVisitorInfo from "./services/UserTracking";
+
 
 function App() {
   const [theme, toggleDirection, themeToggler] = useTheme();
 
+  useEffect(() => {
+    logVisitorInfo()
+  }, []);
   const themeMode = theme === "lightTheme" ? lightTheme : darkTheme;
 
   return (
@@ -28,7 +34,7 @@ function App() {
       <SocialContact />
       <SectionAbout />
       <SectionSkills />
-      <SectionExperience/>
+      <SectionExperience />
       <SectionProjects />
       <SectionContact />
     </ThemeProvider>

@@ -48,7 +48,7 @@ function SectionContact() {
           link = {imageResource.Resume}
           target = "_blank"
         />
-        <Text link ="mailto:bmhuyquoc104@gmail.com" variants={listChildrenAnimation} size="1rem" text="Say Hi 👋" type="button-link" />
+        <Text link ="mailto:huy.vo.softwareengineer@gmail.com" variants={listChildrenAnimation} size="1rem" text="Say Hi 👋" type="button-link" />
       </FlexContainer>
       <Canvas camera={{ position: [0, 0, 5] }}>
         <Suspense fallback={null}>
