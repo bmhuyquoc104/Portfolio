@@ -14,7 +14,7 @@ const SectionHomeStyled = styled(motion.section)`
     display: flex;
     flex-direction: column;
     gap: 1em;
-    width: min(42em, 100%);
+    width: min(47em, 100%);
   }
 
   .scroll-link {
