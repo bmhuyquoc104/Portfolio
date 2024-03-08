@@ -17,9 +17,9 @@ import logVisitorInfo from "./services/UserTracking";
 function App() {
   const [theme, toggleDirection, themeToggler] = useTheme();
 
-  useEffect(() => {
-    logVisitorInfo()
-  }, []);
+  // useEffect(() => {
+  //   logVisitorInfo()
+  // }, []);
   const themeMode = theme === "lightTheme" ? lightTheme : darkTheme;
 
   return (
