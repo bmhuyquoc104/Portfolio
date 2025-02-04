@@ -5,8 +5,7 @@ const projects = {
     {
       id: "web-6",
       name: "Invoice Management",
-      description:
-        "Manage and track all the invoices' status of a customer.",
+      description: "Manage and track all the invoices' status of a customer.",
       about:
         "A gorgeous and expertly website that supports the business to track the current status of invoice from the customer. This website also provides sending new invoice to the client.",
       technologies: [
@@ -21,10 +20,24 @@ const projects = {
       repo: "https://github.com/bmhuyquoc104/Invoice-website",
     },
     {
+      id: "web-7",
+      name: "Hotel landing page",
+      description: "Sample design for hotel's landing page.",
+      about:
+        "A gorgeous and beautiful website that supports the hotel to expose their services and rooms to the client.",
+      technologies: [
+        "React",
+        "JavaScript",
+        "Styled Components",
+      ],
+      image: `${imageResource.HotelAppImage}`,
+      website: "https://theprincessofarenacamranhhome.netlify.app/",
+      repo: "https://github.com/bmhuyquoc104/Hotel-Booking-Website",
+    },
+    {
       id: "web-0",
       name: "Shoppingify",
-      description:
-        "Take your shopping list wherever you go.",
+      description: "Take your shopping list wherever you go.",
       about:
         "A gorgeous and expertly website that supports the client to buy the product and manage their history transaction. The website also helps the business to track their best-selling items by a chart and customize the supplying products. ",
       technologies: [
@@ -69,8 +82,7 @@ const projects = {
     {
       id: "web-4",
       name: "Bamboo Monitor Riser",
-      description:
-        "A gorgeous and expertly built monitor.",
+      description: "A gorgeous and expertly built monitor.",
       about:
         "Your screen will be raised to a more comfortable viewing height with the Bamboo Monitor Riser, a strong and fashionable base. By setting your monitor at eye level, you may find that your posture and level of comfort at work increase, which will keep you more attentive to the task at hand.The artisan-crafted simplicity of the design adds more desk space beneath your computer so that notepads, pens, and USB sticks can be kept underneath the stand.",
       technologies: ["React", "Styled Components"],
@@ -81,8 +93,7 @@ const projects = {
     {
       id: "web-7",
       name: "Interactive Comment",
-      description:
-        "Interactive comments in social website",
+      description: "Interactive comments in social website",
       about:
         "A simple website to display the simple interact between users. This website allows the client to like, dislike, reply and add new comment to communicate with others.",
       technologies: ["React", "Styled Components", "React Hook Form"],
@@ -90,8 +101,6 @@ const projects = {
       website: "https://bmhuyquoc104.github.io/react-interactive-comments/",
       repo: "https://github.com/bmhuyquoc104/react-interactive-comments",
     },
-
-  
   ],
   mobile: [
     {

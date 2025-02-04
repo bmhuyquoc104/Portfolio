@@ -13,6 +13,7 @@ import AmbrosiaAppImage from "./images/ambrosia_app.png";
 import DaredevilAppImage from "./images/daredevil_app.png";
 import ChinesePokerAppImage from "./images/chinese_poker_app.png";
 import UniversalAppImage from "./images/universal_app.png";
+import HotelAppImage from "./images/hotel_app.png";
 import Resume from "./VoQuocHuy_resume.pdf";
 export const imageResource = {
   Logo,
@@ -29,6 +30,7 @@ export const imageResource = {
   AmbrosiaAppImage,
   DaredevilAppImage,
   ChinesePokerAppImage,
+  HotelAppImage,
   UniversalAppImage,
   Resume,
 };
