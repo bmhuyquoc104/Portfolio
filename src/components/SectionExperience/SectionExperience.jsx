@@ -11,20 +11,6 @@ import {
 function SectionExperience() {
   const experiences = [
     {
-      title: "Software Engineer",
-      company_name: "Athena Studio",
-      company_link: "https://athena.studio/",
-      working_period: "11/2022 - 03/2024",
-      descriptions: [
-        "Developed and maintain robust pipelines for both manual and automated data collection from diverse sources, employing effective ETL processes to store data in the warehouse. This facilitates seamless access and analysis for other teams.",
-        "Implemented a reliable, scalable message queue system, optimizing the handling of events from various clients. Introduced event filtering mechanisms to enhance efficiency, ensuring only relevant events are subscribed to.",
-        "Implemented an in-app purchase system, responsible for receiving, decrypting, storing notifications and receipts when users make payments. Allow mobile teams for tracking, and analysis, significantly contributes to the financial operations of the application.",
-        "Refactored legacy code, introducing unit tests and rewriting deprecated services and APIs, enhancing code readability, maintainability, security.",
-        "Collaborated closely with Data Analysts and Frontend teams to address business challenges. Provided data through an API for internal dashboard, significantly enhancing operational efficiency across various teams within the organization.",
-      ],
-      skills: ["Python", "FastAPI", "GCP", "Airflow", "SQL"],
-    },
-    {
       title: "Junior Backend Software Development Engineer",
       company_name: "Employment Hero",
       company_link: "https://employmenthero.com/",
@@ -49,6 +35,20 @@ function SectionExperience() {
         "Sentry",
         "Datadog",
       ],
+    },
+    {
+      title: "Software Engineer",
+      company_name: "Athena Studio",
+      company_link: "https://athena.studio/",
+      working_period: "11/2022 - 03/2024",
+      descriptions: [
+        "Developed and maintain robust pipelines for both manual and automated data collection from diverse sources, employing effective ETL processes to store data in the warehouse. This facilitates seamless access and analysis for other teams.",
+        "Implemented a reliable, scalable message queue system, optimizing the handling of events from various clients. Introduced event filtering mechanisms to enhance efficiency, ensuring only relevant events are subscribed to.",
+        "Implemented an in-app purchase system, responsible for receiving, decrypting, storing notifications and receipts when users make payments. Allow mobile teams for tracking, and analysis, significantly contributes to the financial operations of the application.",
+        "Refactored legacy code, introducing unit tests and rewriting deprecated services and APIs, enhancing code readability, maintainability, security.",
+        "Collaborated closely with Data Analysts and Frontend teams to address business challenges. Provided data through an API for internal dashboard, significantly enhancing operational efficiency across various teams within the organization.",
+      ],
+      skills: ["Python", "FastAPI", "GCP", "Airflow", "SQL"],
     },
   ];
   return (
