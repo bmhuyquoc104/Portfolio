@@ -13,7 +13,7 @@ import ListChildren from "../List/ListChildren/ListChildren";
 import { OrbitControls } from "@react-three/drei";
 
 function SectionSkills() {
-  const SKILLS = ["Python", "FastAPI", "GCP", "PostgreSQL", "Redis", "Airflow"]
+  const SKILLS = ["Ruby on Rails","PostgreSQL", "Redis", "Kafka", "gRPC", "Python"]
   return (
     <SectionSkillStyled id="skills">
       <FlexContainer direction="column" alignItems="flex-start" gap="1em">
