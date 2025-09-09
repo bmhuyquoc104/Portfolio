@@ -11,10 +11,36 @@ import {
 function SectionExperience() {
   const experiences = [
     {
+      title: "Software Engineer",
+      company_name: "Modec",
+      company_link: "https://www.modec.com",
+      working_period: "05/2025 - Present",
+      descriptions: [
+        "Designed and delivered an intelligent Document Mapper system leveraging Azure Document Intelligence (AI/ML) with caching and change detection to extract structured data from millions of PDFs. Eliminated manual navigation of large files and significantly boosted user productivity.",
+        "Engineered report platform using FastAPI async generators and a master–slave DB architecture for interval-based prebuilds. Reduced export wait times and cut hosting costs by ~50% without impacting live queries.",
+        "Independently built an internal workflow automation system using Django and React, processing uploaded files with complex calculation logic and generating structured summary reports, resulting in eliminating manual work and accelerating digital transformation for internal teams",
+        "Developed a near real-time monitoring and alerting solution with Azure Application Insights, Log Analytics, and Logic Apps, improving incident response time by 80% and increasing system reliability.",
+        "Proposed and led the adoption of a feature flag system, persuading the team to embrace safer release practices. Enabled consistent weekly releases, reduced production risk, and improved deployment confidence.",
+        "Proactively secured the platform by migrating all credentials to Azure Key Vault, eliminating secret leak risks and aligning with enterprise compliance standards.",
+      ],
+      skills: [
+        "Python",
+        "FastAPI",
+        "Django",
+        "Azure",
+        "AI Engineer",
+        "PostgreSQL",
+        "MySQL",
+        "Kubernetes",
+        "DevOps",
+        "ReactJS",
+      ],
+    },
+    {
       title: "Junior Backend Software Development Engineer",
       company_name: "Employment Hero",
       company_link: "https://employmenthero.com/",
-      working_period: "04/2024 - Present",
+      working_period: "04/2024 - 04/2025",
       descriptions: [
         "Designed and implemented an auto-saving mechanism for user comments across multiple devices, resulting in improving user experience, encouraging more engagement and increasing user retention across platforms",
         "Designed and implemented a career progression feature leveraging polynomial regression model to forecast user salaries.",
