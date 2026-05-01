@@ -16,10 +16,13 @@ function SectionExperience() {
       company_link: "https://www.modec.com",
       working_period: "05/2025 - Present",
       descriptions: [
-        "Designed and delivered an intelligent Document Mapper system leveraging Azure Document Intelligence (AI/ML) with caching and change detection to extract structured data from millions of PDFs. Eliminated manual navigation of large files and significantly boosted user productivity.",
-        "Engineered report platform using FastAPI async generators and a master–slave DB architecture for interval-based prebuilds. Reduced export wait times and cut hosting costs by ~50% without impacting live queries.",
-        "Independently built an internal workflow automation system using Django and React, processing uploaded files with complex calculation logic and generating structured summary reports, resulting in eliminating manual work and accelerating digital transformation for internal teams",
-        "Developed a near real-time monitoring and alerting solution with Azure Application Insights, Log Analytics, and Logic Apps, improving incident response time by 80% and increasing system reliability.",
+        "Built an intelligent document mapping system using Azure Document Intelligence and custom change-detectionlogic, enabling structured extraction from large volumes of PDFs and reducing manual processing effort for users.",
+        "Designed and implemented a high-performance reporting engine with asynchronous pipelines and precomputation,successfully reducing latency and cloud infrastructure costs by∼50%.",
+        "Developed a proof-of-concept CDC pipeline (MySQL → Kafka → ClickHouse) to evaluate OLAP adoption;benchmarked representative analytical queries (from 6 hours to 30 seconds) and documented tradeoffs forproduction feasibility (data consistency, operational complexity, and cost)",
+        "Built an internal AI-driven workflow system, owning backend development and implementing orchestration forLLM-based agents and shared interfaces, enabling AI-assisted development and reducing reliance on externalvendors.",
+        "Delivered an internal workflow platform (Django + React) for a cross-team initiative, working directly with endusers to define requirements, iterate on solutions, and digitalize previously manual business processes.",
+        "Migrated existing infrastructure to Infrastructure as Code (Terraform), improving consistency and deploymentreliability, and integrated automated security checks into CI/CD pipelines to catch issues before release.",
+        "Modernized infrastructure observability and incident response practices, reducing response times by 80% throughcentralized monitoring and automated alerting via Azure Application Insights.",
         "Proposed and led the adoption of a feature flag system, persuading the team to embrace safer release practices. Enabled consistent weekly releases, reduced production risk, and improved deployment confidence.",
         "Proactively secured the platform by migrating all credentials to Azure Key Vault, eliminating secret leak risks and aligning with enterprise compliance standards.",
       ],
@@ -34,6 +37,8 @@ function SectionExperience() {
         "Kubernetes",
         "DevOps",
         "ReactJS",
+        "PostgreSQL",
+        "ClickHouse"
       ],
     },
     {
@@ -42,12 +47,13 @@ function SectionExperience() {
       company_link: "https://employmenthero.com/",
       working_period: "04/2024 - 04/2025",
       descriptions: [
+        "Developed a scalable search system using PostgreSQL (tsvector, trigram), providing a high-performance,cost-effective alternative to expensive external search infrastructure.",
         "Designed and implemented an auto-saving mechanism for user comments across multiple devices, resulting in improving user experience, encouraging more engagement and increasing user retention across platforms",
         "Designed and implemented a career progression feature leveraging polynomial regression model to forecast user salaries.",
         "Designed and integrated Braze webhook to automate WhatsApp notifications for shortlisted candidates in Malaysia and Singapore, while ensuring the security and stability of the server through robust safeguards.",
         "Migrated CI/CD Pipeline for services from CircleCI to GitHub Actions, resulting in a 5x reduction in costs.",
         "Identified and optimized multiple inefficient queries, gRPC calls and resolved unit test issues, resulting in significantly faster processing times and enhanced system performance.",
-        "Detected and fixed critical issues in the authentication flow for private APIs, contributing to the overall integrity and security of the system.",
+        "Identified and resolved a critical authentication vulnerability related to token misuse; collaborated with team leadsto implement safeguards and improve session handling.",
       ],
       skills: [
         "Ruby",
