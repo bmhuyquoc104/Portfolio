@@ -16,6 +16,9 @@ function SectionExperience() {
       company_link: "https://www.modec.com",
       working_period: "05/2025 - Present",
       descriptions: [
+        "Architected and delivered a distributed workflow platform for engineering document synchronization, replacing scheduled batch execution with a fault-tolerant event-driven architecture that reduced processing latency from 15 minutes to under 3 minutes.",
+        "Architected and delivered a GitOps platform for Kubernetes using ArgoCD, enabling declarative infrastructure, automatic reconciliation, and reducing production recovery time from hours to minutes.",
+        "Established standardized service-to-service communication for a microservices platform, evaluating gRPC and private REST tradeoffs while implementing shared authentication, API contracts, and observability.",
         "Built an intelligent document mapping system using Azure Document Intelligence and custom change-detectionlogic, enabling structured extraction from large volumes of PDFs and reducing manual processing effort for users.",
         "Designed and implemented a high-performance reporting engine with asynchronous pipelines and precomputation,successfully reducing latency and cloud infrastructure costs by∼50%.",
         "Developed a proof-of-concept CDC pipeline (MySQL → Kafka → ClickHouse) to evaluate OLAP adoption;benchmarked representative analytical queries (from 6 hours to 30 seconds) and documented tradeoffs forproduction feasibility (data consistency, operational complexity, and cost)",
