@@ -1,6 +1,7 @@
 import React from "react";
 import { Center, Text3D, Float } from "@react-three/drei";
 import { imageResource } from "../../../assets/imageResource";
+import { EMAIL } from "../../../data/site";
 import { useRef } from "react";
 import { useFrame } from "@react-three/fiber";
 
@@ -20,7 +21,7 @@ function Text3DMesh() {
             bevelSize={0.05}
             letterSpacing={-0.025}
           >
-            {`huy.vo.softwareengineer@gmail.com\n@gmail.com`}
+            {`${EMAIL}\n@gmail.com`}
             <meshNormalMaterial />
           </Text3D>
         </Float>

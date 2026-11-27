@@ -2,6 +2,7 @@ import SectionExperienceStyled from "./SectionExperience.styled";
 import Text from "../Text/Text";
 import experiences from "../../data/experience";
 import UnorderedList from "../List/UnorderedList";
+import TechTag from "../TechTag/TechTag";
 import ListChildren from "../List/ListChildren/ListChildren";
 import {
   heading2Animation,
@@ -20,7 +21,7 @@ function SectionExperience() {
     >
       <Text
         variants={heading2Animation}
-        color="var(--clr_primary_color)"
+        color="var(--clr-accent)"
         type="h2"
         text="Work Experiences"
       />
@@ -32,7 +33,7 @@ function SectionExperience() {
               {experience.title} &#8231;{" "}
               <span>
                 <Text
-                  color="var(--clr_primary_color)"
+                  color="var(--clr-accent)"
                   type="a"
                   text={experience.company_name}
                   target="_blank"
@@ -54,17 +55,7 @@ function SectionExperience() {
               childrenWidth="fit-content"
             >
               {experience.skills.map((technology, index) => (
-                <ListChildren
-                  key={index}
-                  variants={listChildrenAnimation}
-                  fz="0.6875rem"
-                  p="0.25em 1em"
-                  br="50px"
-                  bg="rgb(105,104,105)"
-                  color="var(--clr_header_color_dark)"
-                >
-                  {technology}
-                </ListChildren>
+                <TechTag key={index} variants={listChildrenAnimation}>{technology}</TechTag>
               ))}
             </UnorderedList>
           </div>

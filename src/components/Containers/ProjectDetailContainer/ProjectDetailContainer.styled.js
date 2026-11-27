@@ -9,8 +9,8 @@ const ProjectDetailContainerStyled = styled(motion.div)`
   flex-direction: column;
   bottom: 0;
   right: 0;
-  background-color: ${({ theme }) => theme.navbar.backgroundColor};
-  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+  background-color: ${({ theme }) => theme.colors.bgAlt};
+  box-shadow: 0px 5px 10px 0px color-mix(in srgb, var(--clr-text) 30%, transparent);
   z-index: 10;
   overflow-y: scroll;
   padding: 2em 1.25em;

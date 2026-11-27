@@ -25,20 +25,20 @@ const AbsoluteFlexContainerStyled = styled.div`
   z-index: 2;
   background-image: linear-gradient(
     180deg,
-    rgba(64, 59, 52, 0.2),
-    rgba(37, 33, 31, 1)
+    color-mix(in srgb, var(--clr-media-scrim) 20%, transparent),
+    var(--clr-media-scrim)
   );
   &.mobile {
     background-image: linear-gradient(
       180deg,
-      rgba(64, 59, 52, 0.2),
-      rgba(37, 33, 31, 1)
+      color-mix(in srgb, var(--clr-media-scrim) 20%, transparent),
+      var(--clr-media-scrim)
     );
     gap:1.25em;
     padding:0 2em;
     justify-content:center;
       align-items:center;
-    background-color:${({ theme }) => theme.navbar.backgroundColor};
+    background-color:${({ theme }) => theme.colors.bgAlt};
   }
 `;
 
@@ -51,7 +51,7 @@ const FixedFlexContainerStyled = styled.div`
   width: 100%;
   height: 100%;
   backdrop-filter: blur(5px);
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: color-mix(in srgb, var(--clr-media-scrim) 20%, transparent);
 `;
 
 export {

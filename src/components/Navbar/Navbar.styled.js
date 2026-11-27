@@ -30,7 +30,7 @@ const NavbarStyled = styled(motion.nav)`
     content: "0" counter(my-counter) ".";
     font-size: ${({ direction }) =>
       direction === "column" ? "1rem" : "0.8125rem"};
-    color: var(--clr_primary_color);
+    color: var(--clr-accent);
     display: flex;
     margin-top:auto;
     align-items: flex-end;
@@ -42,13 +42,13 @@ const NavbarStyled = styled(motion.nav)`
     font-size: ${({ direction }) =>
       direction === "column" ? "1rem" : "0.8125rem"};
     font-weight: 300;
-    color: ${({ theme }) => theme.header.color};
+    color: ${({ theme }) => theme.colors.text};
     cursor: pointer;
     text-decoration: none;
   }
   ol li:hover {
     a {
-      color: var(--clr_primary_color);
+      color: var(--clr-accent);
     }
   }
 `;

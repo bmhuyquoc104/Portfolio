@@ -11,15 +11,15 @@ import {
 import UnorderedList from "../List/UnorderedList";
 import ListChildren from "../List/ListChildren/ListChildren";
 import { OrbitControls } from "@react-three/drei";
+import { SKILLS } from "../../data/site";
 
 function SectionSkills() {
-  const SKILLS = ["FastAPI", "Azure Cloud Engineering", "Kubernetes", "Python", "AI Agents", " Postgresql"]
   return (
     <SectionSkillStyled id="skills">
       <FlexContainer direction="column" alignItems="flex-start" gap="1em">
         <Text
           variants={heading2Animation}
-          color="var(--clr_primary_color)"
+          color="var(--clr-accent)"
           type="h2"
           text="My Skills"
         />
@@ -43,8 +43,8 @@ function SectionSkills() {
             gap="0.5em"
             childrenWidth="45%"
           >
-            {SKILLS.map((skill, index) =>
-              <ListChildren key={index} variants={listChildrenAnimation}>
+            {SKILLS.map((skill) =>
+              <ListChildren key={skill} variants={listChildrenAnimation}>
                 <span>&#8226;</span> {skill}
               </ListChildren>)}
           </UnorderedList>

@@ -1,31 +1,30 @@
-const lightTheme = {
-  header: {
-    color: "var(--clr_header_color_light)",
-  },
-  text: {
-    color: "var(--clr_text_color_light)",
-  },
-  body: {
-    backgroundColor: "var(--clr_background_color_light)",
-  },
-  navbar: {
-    backgroundColor: "var(--clr_navbar_bg_light)",
-  },
+import { flavors } from "@catppuccin/palette";
+
+// Mocha for dark, Latte for light. Components use these semantic tokens
+// (theme.colors.* or the matching --clr-* CSS variable), never raw hex.
+const buildTheme = (flavor) => {
+  const c = (name) => flavor.colors[name].hex;
+  return {
+    isDark: flavor.dark,
+    colors: {
+      bg: c("base"),
+      bgAlt: c("mantle"), // navbar, panels
+      text: c("text"),
+      accent: c("peach"),
+      onAccent: flavor.dark ? c("crust") : c("base"),
+      chip: c("surface1"),
+      chipText: c("text"),
+      toggleTrack: c("surface0"),
+    },
+  };
 };
 
-const darkTheme = {
-  header: {
-    color: "var(--clr_header_color_dark)",
-  },
-  text: {
-    color: "var(--clr_text_color_dark)",
-  },
-  body: {
-    backgroundColor: "var(--clr_background_color_dark)",
-  },
-  navbar: {
-    backgroundColor: "var(--clr_navbar_bg_dark)",
-  },
+// Cards sit on photos, so their overlay is dark in both modes.
+const media = flavors.mocha.colors;
+export const mediaColors = {
+  onMedia: media.text.hex,
+  mediaScrim: media.crust.hex,
 };
 
-export { lightTheme, darkTheme };
+export const darkTheme = buildTheme(flavors.mocha);
+export const lightTheme = buildTheme(flavors.latte);

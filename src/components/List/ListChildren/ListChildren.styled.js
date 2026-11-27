@@ -8,7 +8,7 @@ const ListChildrenStyled = styled(motion.li)`
   font-family: var(--font_playFair);
   font-size: ${({ fz }) => fz || "0.8125rem"};
   font-weight: 300;
-  color: ${({ theme,color }) => color == undefined ? theme.header.color : color};
+  color: ${({ theme,color }) => color == undefined ? theme.colors.text : color};
   padding: ${({ p }) => p || "0"};
   background-color: ${({ bg }) => bg || ""};
   border-radius: ${({ br }) => br || "0"};
@@ -16,15 +16,15 @@ const ListChildrenStyled = styled(motion.li)`
   cursor: pointer;
   position: relative;
   span {
-    color: var(--clr_primary_color);
+    color: var(--clr-accent);
     font-size: 0.8125rem;
     :hover {
-      border: 1px solid var(--clr_primary_color);
+      border: 1px solid var(--clr-accent);
     }
   }
   &.active {
     padding: 0.1em 0;
-    color: var(--clr_primary_color);
+    color: var(--clr-accent);
   }
   .underline {
     position: absolute;
@@ -32,7 +32,7 @@ const ListChildrenStyled = styled(motion.li)`
     left: 0;
     right: 0;
     height: 2px;
-    background: var(--clr_primary_color);
+    background: var(--clr-accent);
   }
 `;
 

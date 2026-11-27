@@ -9,7 +9,6 @@ function Toggle({ isDark, toggle }) {
     <ToggleStyled onTap={toggle}>
       <motion.div
         onTap={toggle}
-        style={{ backgroundColor: isDark ? "#000000" : "#ffffff" }}
         className="background"
       >
         <motion.div
@@ -22,7 +21,6 @@ function Toggle({ isDark, toggle }) {
             stiffness: 700,
             damping: 30,
           }}
-          style={{ backgroundColor: "#ff971d" }}
           className="circle"
         >
           {isDark ? (

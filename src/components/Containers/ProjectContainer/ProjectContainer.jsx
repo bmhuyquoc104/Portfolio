@@ -3,7 +3,7 @@ import ProjectContainerStyled from "./ProjectContainer.styled";
 import { AbsoluteFlexContainer } from "../Flex/FlexContainer";
 import Text from "../../Text/Text";
 import UnorderedList from "../../List/UnorderedList";
-import ListChildren from "../../List/ListChildren/ListChildren";
+import TechTag from "../../TechTag/TechTag";
 import { AnimatePresence } from "framer-motion";
 import { FadeInOutAnimation } from "../../../style/AnimationStyled";
 import Button from "../../Button/Button";
@@ -29,8 +29,8 @@ function ProjectContainer({ project, onLearnMore }) {
       <AnimatePresence mode="wait">
         {isHover && (
           <AbsoluteFlexContainer className={isMobile ? "mobile" : ""}>
-            <Text type="h3" color = "white" text={name} />
-            <Text color = "var(--clr_header_color_dark)" type="p">{description}</Text>
+            <Text type="h3" color="var(--clr-on-media)" text={name} />
+            <Text color="var(--clr-on-media)" type="p">{description}</Text>
             <UnorderedList
               p="0"
               gap="0.5em"
@@ -38,16 +38,7 @@ function ProjectContainer({ project, onLearnMore }) {
               childrenWidth="fit-content"
             >
               {technologies.map((technology, index) => (
-                <ListChildren
-                  key={index}
-                  fz="0.6875rem"
-                  p="0.25em 1em"
-                  br="50px"
-                  bg="rgb(105,104,105)"
-                  color="var(--clr_header_color_dark)"
-                >
-                  {technology}
-                </ListChildren>
+                <TechTag key={index} >{technology}</TechTag>
               ))}
             </UnorderedList>
             <Button onClick={() => onLearnMore(project)}>

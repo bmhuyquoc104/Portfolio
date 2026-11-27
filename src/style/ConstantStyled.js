@@ -1,5 +1,5 @@
 const IconStyled = {
-  color: "var(--clr_primary_color)",
+  color: "var(--clr-accent)",
   fontSize: "2rem",
   cursor: "pointer",
 };
@@ -10,12 +10,12 @@ const SocialIconStyled = {
 };
 
 const MoonIconStyled = {
-  color: "#000",
+  color: "var(--clr-on-accent)",
   fontSize: "1rem",
 };
 
 const SunIconStyled = {
-  color: "#fff",
+  color: "var(--clr-on-accent)",
   fontSize: "1rem",
 };
 

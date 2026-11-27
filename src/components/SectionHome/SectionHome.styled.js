@@ -22,16 +22,16 @@ const SectionHomeStyled = styled(motion.section)`
     font-size: ${({ size, direction }) =>
       direction === "column" ? "1rem" : size};
     font-weight: 300;
-    color: var(--clr_primary_color);
+    color: var(--clr-accent);
     border-radius: 4px;
-    border: 1px solid var(--clr_primary_color);
+    border: 1px solid var(--clr-accent);
     padding: 1em 1.25em;
     width: max-content !important;
     /* background-color:transparent; */
     cursor: pointer;
     text-decoration: none;
     :hover {
-      background-color: rgba(240, 165, 0, 0.3);
+      background-color: color-mix(in srgb, var(--clr-accent) 30%, transparent);
     }
   }
 

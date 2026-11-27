@@ -8,7 +8,7 @@ const AbsoluteHeaderContainer = styled.div`
   z-index:1;
   min-height: 100vh;
   width: 100%;
-  background-color: ${({ theme }) => theme.body.backgroundColor};
+  background-color: ${({ theme }) => theme.colors.bg};
 `;
 
 export default AbsoluteHeaderContainer;

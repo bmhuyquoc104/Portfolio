@@ -15,7 +15,7 @@ const SocialContactStyled = styled(motion.aside)`
     right: 2em;
   }
   @media (max-width: 480px) {
-    background-color: ${({ theme }) => theme.navbar.backgroundColor};
+    background-color: ${({ theme }) => theme.colors.bgAlt};
     right: revert;
     left: 0;
     bottom: 0;

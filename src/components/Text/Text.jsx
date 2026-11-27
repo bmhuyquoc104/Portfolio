@@ -21,12 +21,13 @@ function Text({
   target,
   children,
 }) {
-  if (type == "a") {
+  if (type === "a") {
     return (
       <LinkStyled
         href={link}
         td={td}
         target={target}
+        rel={target === "_blank" ? "noopener noreferrer" : undefined}
         variants={variants}
         color={color}
         direction={direction}
@@ -34,26 +35,27 @@ function Text({
         {text}
       </LinkStyled>
     );
-  } else if (type == "button-link") {
+  } else if (type === "button-link") {
     return (
       <ButtonLinkStyled
         href={link}
         whileHover={{
-          backgroundColor: "rgba(240, 165, 0, 0.3)",
+          backgroundColor: "color-mix(in srgb, var(--clr-accent) 30%, transparent)",
           transition: {
             duration: "0.3",
             type: "tween",
           },
         }}
         variants={variants}
-        target = {target}
+        target={target}
+        rel={target === "_blank" ? "noopener noreferrer" : undefined}
         size={size}
         direction={direction}
       >
         {text}
       </ButtonLinkStyled>
     );
-  } else if (type == "h1") {
+  } else if (type === "h1") {
     const textArr = text.split(" ");
     return (
       <Heading1Styled>
@@ -75,9 +77,9 @@ function Text({
         })}
       </Heading1Styled>
     );
-  } else if (type == "p") {
+  } else if (type === "p") {
     return <ParagraphStyled color = {color} variants={variants}>{children}</ParagraphStyled>;
-  } else if (type == "h2") {
+  } else if (type === "h2") {
     const textArr = text.split(" ");
 
     return (
@@ -88,7 +90,7 @@ function Text({
               {words.split("").map((char, index) => (
                 <motion.span
                   variants={variants}
-                  whileHover={{ scale: 1.2, color: "var(--clr_primary_color)" }}
+                  whileHover={{ scale: 1.2, color: "var(--clr-accent)" }}
                   transition={{
                     type: "spring",
                     stiffness: 300,
@@ -105,9 +107,9 @@ function Text({
         })}
       </Heading2Styled>
     );
-  } else if (type == "h3") {
+  } else if (type === "h3") {
     return <Heading3Styled color = {color} variants={variants}>{text}</Heading3Styled>;
-  } else if (type == "h4") {
+  } else if (type === "h4") {
     return <Heading4Styled variants={variants}>{text}</Heading4Styled>;
   }
 }

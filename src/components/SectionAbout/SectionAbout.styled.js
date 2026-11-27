@@ -13,7 +13,7 @@ const SectionAboutStyled = styled(motion.section)`
     font-size: ${({ direction }) =>
       direction === "column" ? "1rem" : "0.8125rem"};
     font-weight: 300;
-    color: var(--clr_primary_color);
+    color: var(--clr-accent);
     cursor: pointer;
     text-decoration: none;
     :hover{

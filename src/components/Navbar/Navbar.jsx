@@ -5,11 +5,11 @@ import {
   listParentAnimation,
   listChildrenAnimation,
 } from "../../style/AnimationStyled";
-import { imageResource } from "../../assets/imageResource"
+import { imageResource } from "../../assets/imageResource";
+import { NAV_SECTIONS } from "../../data/site";
 import { motion } from "framer-motion";
 
 function Navbar({ direction, setIsToggle }) {
-  const NAVBAR_OPTIONS = ["About", "Skills", "Experiences", "Projects", "Contact"]
   return (
     <NavbarStyled
       variants={listParentAnimation}
@@ -18,11 +18,11 @@ function Navbar({ direction, setIsToggle }) {
       direction={direction}
     >
       <motion.ol>
-        {NAVBAR_OPTIONS.map((option, index) =>
-          <motion.li key={index} variants={listChildrenAnimation}>
+        {NAV_SECTIONS.map((option) =>
+          <motion.li key={option} variants={listChildrenAnimation}>
             <Link
               onClick={
-                direction == "column" ? () => setIsToggle(false) : () => { }
+                direction === "column" ? () => setIsToggle(false) : undefined
               }
               to={option.toLowerCase()}
               smooth={true}

@@ -4,7 +4,7 @@ import { FlexContainer } from "../Flex/FlexContainer";
 import { IconStyled } from "../../../style/ConstantStyled";
 import Text from "../../Text/Text";
 import UnorderedList from "../../List/UnorderedList";
-import ListChildren from "../../List/ListChildren/ListChildren";
+import TechTag from "../../TechTag/TechTag";
 import { IoArrowUndoCircle } from "react-icons/io5";
 import { LinearXDirection } from "../../../style/AnimationStyled";
 import { GiEarthAsiaOceania } from "react-icons/gi";
@@ -88,16 +88,7 @@ function ProjectDetailContainer({ project, onClose }) {
           childrenWidth="fit-content"
         >
           {technologies.map((technology, index) => (
-            <ListChildren
-              key={index}
-              fz="0.6875rem"
-              p="0.25em 1em"
-              br="50px"
-              bg="rgb(105,104,105)"
-              color="var(--clr_header_color_dark)"
-            >
-              {technology}
-            </ListChildren>
+            <TechTag key={index} >{technology}</TechTag>
           ))}
         </UnorderedList>
         {!isMobile && (

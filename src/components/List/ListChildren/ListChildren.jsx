@@ -16,7 +16,7 @@ function ListChildren({
       p={p}
       bg={bg}
       br={br}
-      className={isActive == "active" ? "active" : ""}
+      className={isActive === "active" ? "active" : ""}
       fz={fz}
       onClick={onClick}
       variants={variants}

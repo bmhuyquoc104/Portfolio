@@ -2,6 +2,7 @@ import React, { Suspense } from "react";
 import SectionContactStyled from "./SectionContact.styled";
 import Text from "../Text/Text";
 import {imageResource} from "../../assets/imageResource"
+import { EMAIL } from "../../data/site";
 import {FlexContainer} from "../Containers/Flex/FlexContainer";
 import { Canvas } from "@react-three/fiber";
 import Text3DMesh from "../Mesh/Text3D/Text3DMesh";
@@ -22,7 +23,7 @@ function SectionContact() {
       >
         <Text
           variants={heading2Animation}
-          color="var(--clr_primary_color)"
+          color="var(--clr-accent)"
           type="h2"
           text="Contact me"
         />
@@ -34,7 +35,7 @@ function SectionContact() {
         <Text type="p">
           I'm currently looking for an{" "}
           <span>
-            <Text text="software engineering" type="a" color="var(--clr_primary_color)" />
+            <Text text="software engineering" type="a" color="var(--clr-accent)" />
           </span>{" "}
           job. If you have any opportunities for me, please feel free to contact
           me, I'll get back to you ASAP!
@@ -43,12 +44,12 @@ function SectionContact() {
         variants={listChildrenAnimation}
           td = "underline"
           type="a"
-          color="var(--clr_primary_color)"
+          color="var(--clr-accent)"
           text="Check my resume here!"
           link = {imageResource.Resume}
           target = "_blank"
         />
-        <Text link ="mailto:huy.vo.softwareengineer@gmail.com" variants={listChildrenAnimation} size="1rem" text="Say Hi 👋" type="button-link" />
+        <Text link={`mailto:${EMAIL}`} variants={listChildrenAnimation} size="1rem" text="Say Hi 👋" type="button-link" />
       </FlexContainer>
       <Canvas camera={{ position: [0, 0, 5] }}>
         <Suspense fallback={null}>

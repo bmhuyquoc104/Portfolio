@@ -4,9 +4,9 @@ import { motion } from "framer-motion";
 const LinkStyled = styled(motion.a)`
   display: flex;
   cursor: pointer;
-  color: ${({ theme }) => theme.header.color};
+  color: ${({ theme }) => theme.colors.text};
   :hover {
-    color: var(--clr_primary_color);
+    color: var(--clr-accent);
     transform:scaleY(1.2);
   }
 `;

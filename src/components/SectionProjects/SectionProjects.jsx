@@ -52,7 +52,7 @@ function SectionProjects() {
       >
         <Text
           variants={heading2Animation}
-          color="var(--clr_primary_color)"
+          color="var(--clr-accent)"
           type="h2"
           text="My Projects"
         />
@@ -60,14 +60,14 @@ function SectionProjects() {
           <UnorderedList childrenWidth="max-content">
             {arr.map((element) => (
               <ListChildren
-                isActive={element.items == selectedTab ? "active" : "inactive"}
+                isActive={element.items === selectedTab ? "active" : "inactive"}
                 key={element.title}
                 onClick={() => {
                   setSelectedTab(element.items);
                 }}
               >
                 {element.title}
-                {element.items == selectedTab ? (
+                {element.items === selectedTab ? (
                   <motion.div className="underline" layoutId="underline" />
                 ) : null}
               </ListChildren>

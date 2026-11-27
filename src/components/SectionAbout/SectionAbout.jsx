@@ -16,7 +16,7 @@ function SectionAbout() {
       <FlexContainer direction="column" alignItems="flex-start" gap="1em">
         <Text
           variants={heading2Animation}
-          color="var(--clr_primary_color)"
+          color="var(--clr-accent)"
           type="h2"
           text="About Me"
         />
@@ -28,7 +28,7 @@ function SectionAbout() {
           challenges on {"  "}
           <span>
             <Text
-              color="var(--clr_primary_color)"
+              color="var(--clr-accent)"
               type="a"
               text="Frontend Mentor"
               link="https://www.frontendmentor.io/profile/bmhuyquoc104"
@@ -39,7 +39,7 @@ function SectionAbout() {
           and{" "}
           <span>
             <Text
-              color="var(--clr_primary_color)"
+              color="var(--clr-accent)"
               type="a"
               text="Dev Challenges"
               target="_blank"
@@ -54,7 +54,7 @@ function SectionAbout() {
           <Text
             td="underline"
             type="a"
-            color="var(--clr_primary_color)"
+            color="var(--clr-accent)"
             text="Athena Studio"
             link="https://athena.studio/"
             target="_blank"
