@@ -8,7 +8,7 @@ import {
   listChildrenAnimation,
 } from "../../style/AnimationStyled";
 import Image from "../Containers/ImageContainer/Image";
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link } from "react-scroll";
 
 function SectionAbout() {
   return (

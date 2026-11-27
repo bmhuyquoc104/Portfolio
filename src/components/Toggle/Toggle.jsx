@@ -1,4 +1,3 @@
-import { useState } from "react";
 import ToggleStyled from "./Toggle.styled";
 import { RiMoonFill } from "react-icons/ri";
 import { RiSunFill } from "react-icons/ri";

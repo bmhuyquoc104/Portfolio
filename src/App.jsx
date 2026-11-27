@@ -1,5 +1,6 @@
 import GlobalStyled from "./style/GlobalStyled";
-import { ThemeProvider } from "styled-components";
+import { ThemeProvider, StyleSheetManager } from "styled-components";
+import isPropValid from "@emotion/is-prop-valid";
 import useTheme from "./hooks/useTheme";
 import Header from "./components/Header/Header";
 import SectionHome from "./components/SectionHome/SectionHome";
@@ -14,6 +15,12 @@ function App() {
   const { theme, isDark, toggle } = useTheme();
 
   return (
+    // v6 forwards every prop to the DOM; keep v5 behaviour for plain tags.
+    <StyleSheetManager
+      shouldForwardProp={(prop, target) =>
+        typeof target !== "string" || isPropValid(prop)
+      }
+    >
     <ThemeProvider theme={theme}>
       <GlobalStyled />
       <Header isDark={isDark} toggle={toggle} />
@@ -25,6 +32,7 @@ function App() {
       <SectionProjects />
       <SectionContact />
     </ThemeProvider>
+    </StyleSheetManager>
   );
 }
 

@@ -1,4 +1,4 @@
-import { imageResource } from "./imageResource";
+import { imageResource } from "../assets/imageResource";
 
 const projects = {
   web: [
@@ -91,7 +91,7 @@ const projects = {
       repo: "https://github.com/bmhuyquoc104/react-crowd-funding-website",
     },
     {
-      id: "web-7",
+      id: "web-5",
       name: "Interactive Comment",
       description: "Interactive comments in social website",
       about:

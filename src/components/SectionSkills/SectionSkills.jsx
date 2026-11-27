@@ -50,7 +50,7 @@ function SectionSkills() {
           </UnorderedList>
         </FlexContainer>
       </FlexContainer>
-      <Canvas styled={{ zIndex: 0 }} camera>
+      <Canvas>
         <Suspense fallback={null}>
           <ambientLight />
           <pointLight position={[10, 10, 10]} />

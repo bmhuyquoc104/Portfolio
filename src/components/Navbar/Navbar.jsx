@@ -1,4 +1,4 @@
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link } from "react-scroll";
 import NavbarStyled from "./Navbar.styled";
 import Text from "../Text/Text";
 import {

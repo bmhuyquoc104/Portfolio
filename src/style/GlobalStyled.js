@@ -1,5 +1,4 @@
 import { createGlobalStyle } from "styled-components";
-import { motion } from "framer-motion";
 
 const GlobalStyled = createGlobalStyle`
   *,*::after,*::before{

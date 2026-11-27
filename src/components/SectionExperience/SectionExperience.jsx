@@ -1,6 +1,6 @@
 import SectionExperienceStyled from "./SectionExperience.styled";
 import Text from "../Text/Text";
-import experiences from "../../assets/ExperienceList";
+import experiences from "../../data/experience";
 import UnorderedList from "../List/UnorderedList";
 import ListChildren from "../List/ListChildren/ListChildren";
 import {

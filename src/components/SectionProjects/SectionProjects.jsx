@@ -14,9 +14,8 @@ import { AnimatePresence, motion } from "framer-motion";
 import {
   heading2Animation,
   sectionAboutAnimation,
-  listParentAnimation,
 } from "../../style/AnimationStyled";
-import projects from "../../assets/ProjectList";
+import projects from "../../data/projects";
 import ProjectDetailContainer from "../Containers/ProjectDetailContainer/ProjectDetailContainer";
 
 function SectionProjects() {
