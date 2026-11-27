@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { m } from "motion/react";
 
-const SectionStyled = styled.section`
+const SectionStyled = styled(m.section)`
   margin-bottom: 4.5rem;
   scroll-margin-top: 4rem;
 
@@ -35,7 +36,14 @@ const SectionStyled = styled.section`
 
 function Section({ id, title, children }) {
   return (
-    <SectionStyled id={id} aria-label={title}>
+    <SectionStyled
+      id={id}
+      aria-label={title}
+      initial={{ opacity: 0, y: 16 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+    >
       <h2 className="title">{title}</h2>
       {children}
     </SectionStyled>
