@@ -4,7 +4,7 @@ import { ItemList } from "../Section/parts";
 import ExternalLink from "../ExternalLink/ExternalLink";
 import Tag, { TagList } from "../Tag/Tag";
 import experiences from "../../data/experience";
-import { EDUCATION, RESUME_URL } from "../../data/site";
+import { EDUCATION } from "../../data/site";
 
 const Item = styled.li`
   display: grid;
@@ -39,10 +39,6 @@ const Education = styled(ItemList)`
     margin-top: 0.25rem;
     font-size: 0.875rem;
   }
-`;
-
-const ResumeLink = styled.div`
-  margin-top: 2rem;
 `;
 
 function Experience() {
@@ -82,9 +78,6 @@ function Experience() {
           </div>
         </Item>
       </Education>
-      <ResumeLink>
-        <ExternalLink href={RESUME_URL}>View full résumé</ExternalLink>
-      </ResumeLink>
     </Section>
   );
 }

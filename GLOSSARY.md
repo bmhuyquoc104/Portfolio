@@ -1,6 +1,6 @@
 # Portfolio
 
-A one-page personal site whose job is to get Vo Quoc Huy hired as a software engineer. Its reader is a recruiter or hiring manager who skims for about a minute.
+A one-page personal site whose job is to get Huy Quoc Vo hired as a software engineer. Its reader is a recruiter or hiring manager who skims for about a minute.
 
 ## Language
 

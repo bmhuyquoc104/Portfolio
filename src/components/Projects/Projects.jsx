@@ -10,21 +10,6 @@ const featured = allProjects
   .filter((project) => project.featured)
   .sort((a, b) => a.featured - b.featured);
 
-// Desktop has no visible section titles, so the label is shown here; mobile already has a sticky title.
-const Label = styled.p`
-  display: none;
-  margin-bottom: 0.5rem;
-  font-size: 0.8125rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--clr-accent);
-
-  @media (min-width: 1024px) {
-    display: block;
-  }
-`;
-
 const AllLink = styled.a`
   display: inline-flex;
   align-items: center;
@@ -48,7 +33,6 @@ const AllLink = styled.a`
 function Projects() {
   return (
     <Section id="projects" title="Personal projects">
-      <Label>Personal projects</Label>
       <Intro>{PROJECTS_INTRO}</Intro>
       <ProjectList projects={featured} />
       <AllLink href="/projects">

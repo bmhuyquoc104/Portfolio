@@ -1,6 +1,6 @@
 # Portfolio
 
-One-page portfolio for Vo Quoc Huy, software engineer. Live at [huyvq.netlify.app](https://huyvq.netlify.app/).
+One-page portfolio for Huy Quoc Vo (Steve Vo), software engineer. Live at [huyvq.netlify.app](https://huyvq.netlify.app/).
 
 ## Stack
 
