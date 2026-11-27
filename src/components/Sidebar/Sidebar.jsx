@@ -1,8 +1,9 @@
 import styled from "styled-components";
 import StatusPanel from "../StatusPanel/StatusPanel";
 import Reveal from "../Reveal/Reveal";
+import { FiFileText } from "react-icons/fi";
 import useActiveSection from "../../hooks/useActiveSection";
-import { NAME, ROLE, TAGLINE, NAV_SECTIONS, SOCIAL_LINKS } from "../../data/site";
+import { NAME, ALIAS, ROLE, TAGLINE, NAV_SECTIONS, SOCIAL_LINKS, RESUME_URL } from "../../data/site";
 
 const SECTION_IDS = NAV_SECTIONS.map(({ id }) => id);
 
@@ -28,6 +29,10 @@ const SidebarStyled = styled.header`
     letter-spacing: -0.02em;
     color: var(--clr-text);
   }
+  .alias {
+    margin-top: 0.25rem;
+    font-size: 0.875rem;
+  }
   .role {
     margin-top: 0.75rem;
     font-size: 1.25rem;
@@ -37,6 +42,26 @@ const SidebarStyled = styled.header`
   .tagline {
     max-width: 20rem;
     margin-top: 1rem;
+  }
+`;
+
+const ResumeButton = styled.a`
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+  padding: 0.625rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--clr-text);
+  border: 1px solid var(--clr-line);
+  border-radius: 6px;
+  transition: color 0.2s ease, border-color 0.2s ease;
+
+  &:hover,
+  &:focus-visible {
+    color: var(--clr-accent);
+    border-color: var(--clr-accent);
   }
 `;
 
@@ -105,6 +130,9 @@ function Sidebar() {
     <SidebarStyled>
       <div>
         <Reveal as="h1">{NAME}</Reveal>
+        <Reveal as="p" className="alias" delay={0.04}>
+          Also known as {ALIAS}
+        </Reveal>
         <Reveal as="p" className="role" delay={0.08}>
           {ROLE}
         </Reveal>
@@ -113,6 +141,12 @@ function Sidebar() {
         </Reveal>
         <Reveal delay={0.24}>
           <StatusPanel />
+        </Reveal>
+        <Reveal delay={0.32}>
+          <ResumeButton href={RESUME_URL} target="_blank" rel="noopener noreferrer">
+            <FiFileText aria-hidden="true" />
+            Résumé
+          </ResumeButton>
         </Reveal>
         <Nav aria-label="Sections">
           <ul>

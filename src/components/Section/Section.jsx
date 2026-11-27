@@ -23,13 +23,11 @@ const SectionStyled = styled(m.section)`
   @media (min-width: 1024px) {
     scroll-margin-top: 6rem;
     .title {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      overflow: hidden;
-      clip: rect(0 0 0 0);
+      position: static;
+      margin: 0 0 1.5rem;
       padding: 0;
-      margin: -1px;
+      background: none;
+      backdrop-filter: none;
     }
   }
 `;

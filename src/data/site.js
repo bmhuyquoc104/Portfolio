@@ -1,6 +1,7 @@
 import { FaGithub, FaLinkedinIn, FaEnvelope } from "react-icons/fa";
 
-export const NAME = "Vo Quoc Huy";
+export const NAME = "Huy Quoc Vo";
+export const ALIAS = "Steve Vo"; // English name, so foreign recruiters can address and search for you
 export const ROLE = "Software Engineer";
 export const TAGLINE =
   "I build full-stack applications and cloud infrastructure that solve business problems: faster pipelines, lower cloud cost, safer releases.";
@@ -21,8 +22,7 @@ export const NAV_SECTIONS = [
 ];
 
 export const ABOUT = [
-  "I'm a software engineer in Ho Chi Minh City. I build full-stack applications and cloud infrastructure (event-driven services, data pipelines, UIs and the platform they run on) with Python, React, Azure and Kubernetes, focused on reliable deployments, observability and cost.",
-  "Today I work at Modec on a distributed document platform and the infrastructure under it. Before that I was at Employment Hero and Athena Studio.",
+  "I work mostly in the terminal (Neovim, tmux, fish; my setup is on GitHub), use AI tools to move faster, and keep learning from new tech and books.",
 ];
 
 export const PROJECTS_INTRO =

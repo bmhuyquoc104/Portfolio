@@ -18,7 +18,7 @@ const Skills = styled.dl`
   dt {
     font-size: 0.8125rem;
     font-weight: 600;
-    color: var(--clr-accent);
+    color: var(--clr-text);
   }
   dd {
     font-size: 0.875rem;
