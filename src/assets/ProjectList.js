@@ -146,4 +146,9 @@ const projects = {
   ],
 };
 
-export default projects;
+const withKind = (kind) => (project) => ({ ...project, kind });
+
+export default {
+  web: projects.web.map(withKind("web")),
+  mobile: projects.mobile.map(withKind("mobile")),
+};

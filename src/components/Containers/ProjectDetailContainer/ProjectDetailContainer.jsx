@@ -9,28 +9,21 @@ import { IoArrowUndoCircle } from "react-icons/io5";
 import { LinearXDirection } from "../../../style/AnimationStyled";
 import { GiEarthAsiaOceania } from "react-icons/gi";
 import { FaGithub } from "react-icons/fa";
-function ProjectDetailContainer({
-  name,
-  description,
-  image,
-  website,
-  repo,
-  about,
-  technologies,
-  setLearnMore,
-  id,
-}) {
+function ProjectDetailContainer({ project, onClose }) {
+  const { name, description, image, website, repo, about, technologies, kind } =
+    project;
+  const isMobile = kind === "mobile";
   useEffect(() => {
     const handleClickOutSide = (event) => {
       if (sectionRef.current && !sectionRef.current.contains(event.target)) {
-        setLearnMore(false);
+        onClose();
       }
     };
     document.addEventListener("click", handleClickOutSide, true);
     return () => {
       document.removeEventListener("click", handleClickOutSide, true);
     };
-  }, [setLearnMore]);
+  }, [onClose]);
   const sectionRef = useRef(null);
   return (
     <ProjectDetailContainerStyled
@@ -42,7 +35,7 @@ function ProjectDetailContainer({
     >
       <FlexContainer justifyContent="space-between" alignItems="center">
         <FlexContainer
-          onClick={() => setLearnMore(false)}
+          onClick={onClose}
           cursor="pointer"
           gap="0.25em"
           justifyContent="flex-start"
@@ -61,10 +54,10 @@ function ProjectDetailContainer({
             target="_blank"
             td="underline"
             type="a"
-            link={id.includes("mobile") ? repo : website}
-            text={id.includes("mobile") ? `Open GitHub` : `Visit Website`}
+            link={isMobile ? repo : website}
+            text={isMobile ? `Open GitHub` : `Visit Website`}
           />
-          {id.includes("mobile") ? (
+          {isMobile ? (
             <>
               <FaGithub style={IconStyled} />
             </>
@@ -79,7 +72,7 @@ function ProjectDetailContainer({
         <Text type="h3" text={name} />
         <Text type="p">{description}</Text>
         <img
-          className={id.includes("mobile") ? "mobile" : ""}
+          className={isMobile ? "mobile" : ""}
           src={image}
           alt={`${name} project image`}
         />
@@ -107,7 +100,7 @@ function ProjectDetailContainer({
             </ListChildren>
           ))}
         </UnorderedList>
-        {!id.includes("mobile") && (
+        {!isMobile && (
           <>
             <Text type="h4" text="Websites" />
             <Text

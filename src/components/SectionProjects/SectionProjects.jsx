@@ -7,8 +7,8 @@ import {
 } from "../Containers/Flex/FlexContainer";
 import UnorderedList from "../List/UnorderedList";
 import ListChildren from "../List/ListChildren/ListChildren";
-import Tab from "../Tab/Tab";
-import { TabContext } from "../../hooks/useContext";
+import GridContainer from "../Containers/Grid/GridContainer";
+import ProjectContainer from "../Containers/ProjectContainer/ProjectContainer";
 import { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import {
@@ -31,29 +31,19 @@ function SectionProjects() {
     },
   ];
   const [selectedTab, setSelectedTab] = useState(arr[0].items);
-  const [project, setProject] = useState({});
-  const [learnMore, setLearnMore] = useState(false);
+  const [project, setProject] = useState(null);
 
   useEffect(() => {
-    if (learnMore) {
+    if (project) {
       document.body.style.overflow = "hidden";
     }
     return () => {
       document.body.style.overflow = "unset";
     };
-  }, [learnMore]);
+  }, [project]);
 
   return (
-    <TabContext.Provider
-      value={{
-        selectedTab,
-        setSelectedTab,
-        project,
-        setProject,
-        learnMore,
-        setLearnMore,
-      }}
-    >
+    <>
       <SectionProjectsStyled
         whileInView="show"
         initial="hidden"
@@ -85,27 +75,28 @@ function SectionProjects() {
             ))}
           </UnorderedList>
         </FlexContainer>
-        <Tab></Tab>
+        <GridContainer
+          className={selectedTab[0].kind === "mobile" ? "mobile" : ""}
+        >
+          <AnimatePresence mode="wait">
+            {selectedTab.map((p) => (
+              <ProjectContainer key={p.id} project={p} onLearnMore={setProject} />
+            ))}
+          </AnimatePresence>
+        </GridContainer>
         <AnimatePresence mode="wait">
-          {learnMore && (
+          {project && (
             <div>
               <FixedFlexContainer />
               <ProjectDetailContainer
-                website={project.website}
-                image={project.image}
-                repo={project.repo}
-                name={project.name}
-                about={project.about}
-                technologies={project.technologies}
-                description={project.description}
-                id = {project.id}
-                setLearnMore={setLearnMore}
+                project={project}
+                onClose={() => setProject(null)}
               />
             </div>
           )}
         </AnimatePresence>
       </SectionProjectsStyled>
-    </TabContext.Provider>
+    </>
   );
 }
 
