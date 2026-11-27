@@ -6,14 +6,15 @@ const FooterStyled = styled.footer`
   padding-bottom: 4rem;
   font-size: 0.875rem;
 
+  /* The closing call to action, so it gets the accent colour (other inline links stay plain). */
   a {
     font-weight: 500;
-    color: var(--clr-text);
+    color: var(--clr-accent);
     text-decoration: underline;
     text-underline-offset: 3px;
   }
   a:hover {
-    color: var(--clr-accent);
+    color: var(--clr-text);
   }
   .mail {
     white-space: nowrap;
