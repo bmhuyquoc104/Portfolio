@@ -9,7 +9,7 @@ export const EMAIL = "huy.vo.softwareengineer@gmail.com";
 
 export const SOCIAL_LINKS = [
   { name: "GitHub", href: "https://github.com/bmhuyquoc104", Icon: FaGithub },
-  { name: "LinkedIn", href: "https://www.linkedin.com/in/bmhuyquoc104/", Icon: FaLinkedinIn },
+  { name: "LinkedIn", href: "https://www.linkedin.com/in/huyvoquoc", Icon: FaLinkedinIn },
   { name: "Email", href: `mailto:${EMAIL}`, Icon: FaEnvelope },
 ];
 
