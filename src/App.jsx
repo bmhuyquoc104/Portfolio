@@ -1,4 +1,5 @@
 import styled, { ThemeProvider } from "styled-components";
+import { LazyMotion, MotionConfig, domAnimation } from "motion/react";
 import GlobalStyled from "./style/GlobalStyled";
 import useTheme from "./hooks/useTheme";
 import Sidebar from "./components/Sidebar/Sidebar";
@@ -50,6 +51,9 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
+      {/* LazyMotion loads only the DOM animation features; reducedMotion="user" honours the OS setting. */}
+      <LazyMotion features={domAnimation} strict>
+        <MotionConfig reducedMotion="user">
       <GlobalStyled />
       <SkipLink href="#main">Skip to content</SkipLink>
       <ThemeToggle isDark={isDark} toggle={toggle} />
@@ -66,6 +70,8 @@ function App() {
           </Main>
         </Layout>
       )}
+        </MotionConfig>
+      </LazyMotion>
     </ThemeProvider>
   );
 }

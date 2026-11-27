@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import StatusPanel from "../StatusPanel/StatusPanel";
+import Reveal from "../Reveal/Reveal";
 import useActiveSection from "../../hooks/useActiveSection";
 import { NAME, ROLE, TAGLINE, NAV_SECTIONS, SOCIAL_LINKS } from "../../data/site";
 
@@ -103,10 +104,16 @@ function Sidebar() {
   return (
     <SidebarStyled>
       <div>
-        <h1>{NAME}</h1>
-        <p className="role">{ROLE}</p>
-        <p className="tagline">{TAGLINE}</p>
-        <StatusPanel />
+        <Reveal as="h1">{NAME}</Reveal>
+        <Reveal as="p" className="role" delay={0.08}>
+          {ROLE}
+        </Reveal>
+        <Reveal as="p" className="tagline" delay={0.16}>
+          {TAGLINE}
+        </Reveal>
+        <Reveal delay={0.24}>
+          <StatusPanel />
+        </Reveal>
         <Nav aria-label="Sections">
           <ul>
             {NAV_SECTIONS.map(({ id, label }) => (
