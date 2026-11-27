@@ -3,11 +3,21 @@ import { imageResource } from "../assets/imageResource";
 const projects = {
   web: [
     {
+      id: "web-8",
+      featured: 1, // 1-3: shown on the home page in this order; the rest live on /projects
+      name: "Job Scout",
+      description:
+        "Scrapes six job boards daily into PostgreSQL and shows open jobs and visa-sponsorship stats for six countries.",
+      technologies: ["Python", "FastAPI", "PostgreSQL", "React", "AI Agents"],
+      image: `${imageResource.JobScoutImage}`,
+      repo: "https://github.com/bmhuyquoc104/job_scout",
+      // The free-tier backend sleeps, so the demo can sit blank for ~30s on a cold start.
+      demo: "https://job-scout-xi-eight.vercel.app",
+    },
+    {
       id: "web-6",
       name: "Invoice Management",
       description: "Manage and track all the invoices' status of a customer.",
-      about:
-        "A gorgeous and expertly website that supports the business to track the current status of invoice from the customer. This website also provides sending new invoice to the client.",
       technologies: [
         "React",
         "TypeScript",
@@ -23,8 +33,6 @@ const projects = {
       id: "web-7",
       name: "Hotel landing page",
       description: "Sample design for hotel's landing page.",
-      about:
-        "A gorgeous and beautiful website that supports the hotel to expose their services and rooms to the client.",
       technologies: [
         "React",
         "JavaScript",
@@ -36,10 +44,9 @@ const projects = {
     },
     {
       id: "web-0",
+      featured: 3, // 1-3: shown on the home page in this order; the rest live on /projects
       name: "Shoppingify",
       description: "Take your shopping list wherever you go.",
-      about:
-        "A gorgeous and expertly website that supports the client to buy the product and manage their history transaction. The website also helps the business to track their best-selling items by a chart and customize the supplying products. ",
       technologies: [
         "React",
         "Styled Components",
@@ -55,8 +62,6 @@ const projects = {
       id: "web-2",
       name: "Jobs Finding",
       description: "Find you dream jobs by your strengths.",
-      about:
-        "A responsive website that built to let a user find your wanted software job by filtering their skills or position.",
       technologies: [
         "React",
         "Mongoose",
@@ -72,8 +77,6 @@ const projects = {
       id: "web-3",
       name: "Sneaker",
       description: "Beautiful thumbnail for display sneaker product.",
-      about:
-        "An e-commerce website display a thumbnail of a sneaker product. Providing simple buying progress for user.",
       technologies: ["React", "Styled Components"],
       image: `${imageResource.SneakerWebsiteImage}`,
       website: "https://bmhuyquoc104.github.io/e-commerce/",
@@ -83,8 +86,6 @@ const projects = {
       id: "web-4",
       name: "Bamboo Monitor Riser",
       description: "A gorgeous and expertly built monitor.",
-      about:
-        "Your screen will be raised to a more comfortable viewing height with the Bamboo Monitor Riser, a strong and fashionable base. By setting your monitor at eye level, you may find that your posture and level of comfort at work increase, which will keep you more attentive to the task at hand.The artisan-crafted simplicity of the design adds more desk space beneath your computer so that notepads, pens, and USB sticks can be kept underneath the stand.",
       technologies: ["React", "Styled Components"],
       image: `${imageResource.CrowdFundWebsiteImage}`,
       website: "https://bmhuyquoc104.github.io/react-crowd-funding-website/",
@@ -94,8 +95,6 @@ const projects = {
       id: "web-5",
       name: "Interactive Comment",
       description: "Interactive comments in social website",
-      about:
-        "A simple website to display the simple interact between users. This website allows the client to like, dislike, reply and add new comment to communicate with others.",
       technologies: ["React", "Styled Components", "React Hook Form"],
       image: `${imageResource.InteractiveWebsiteImage}`,
       website: "https://bmhuyquoc104.github.io/react-interactive-comments/",
@@ -106,19 +105,16 @@ const projects = {
     {
       id: "mobile-0",
       name: "Universal",
-      description: "Find your cinema and book the ticket!.",
-      about:
-        "A gorgeous and expertly cinema management app that let the client book the movie ticket online. This app also provides a list of available cinemas in each cities. The users can receive the latest discount notification and watch the trailer of streaming and upcoming movie in the cinema.",
+      description: "Find your cinema and book the ticket!",
       technologies: ["Java", "Firebase"],
       image: `${imageResource.UniversalAppImage}`,
       repo: "https://github.com/bmhuyquoc104/android_cinema_management",
     },
     {
       id: "mobile-1",
+      featured: 2, // 1-3: shown on the home page in this order; the rest live on /projects
       name: "Ambrosia",
-      description: "Explore all restaurants near you!.",
-      about:
-        "A gorgeous and expertly restaurant discovery app that provides client various of different type of restaurants in their area.",
+      description: "Explore all restaurants near you!",
       technologies: ["SwiftUI", "Firebase", "Swift"],
       image: `${imageResource.AmbrosiaAppImage}`,
       repo: "https://github.com/bmhuyquoc104/Ambrosia",
@@ -127,8 +123,6 @@ const projects = {
       id: "mobile-2",
       name: "Chinese Poker",
       description: "Improve your logical skill by playing chinese poker game!",
-      about:
-        "A gorgeous and expertly game that let the user play chinese poker game. This game also provides a leader board and different type of modes to suit all players.",
       technologies: ["SwiftUI", "Swift"],
       image: `${imageResource.ChinesePokerAppImage}`,
       repo: "https://github.com/bmhuyquoc104/ChinesePoker2",
@@ -137,8 +131,6 @@ const projects = {
       id: "mobile-3",
       name: "Daredevil's Profile",
       description: "All you to need to know about Daredevil is here! ",
-      about:
-        "A gorgeous app that provides all information about daredevil character in marvel. This app is designed to marvel fan to follow their favorite super hero.",
       technologies: ["SwiftUI", "Swift"],
       image: `${imageResource.DaredevilAppImage}`,
       repo: "https://github.com/bmhuyquoc104/Daredevil-App",
@@ -148,7 +140,10 @@ const projects = {
 
 const withKind = (kind) => (project) => ({ ...project, kind });
 
-export default {
+const grouped = {
   web: projects.web.map(withKind("web")),
   mobile: projects.mobile.map(withKind("mobile")),
 };
+
+export const allProjects = [...grouped.web, ...grouped.mobile];
+export default grouped;
