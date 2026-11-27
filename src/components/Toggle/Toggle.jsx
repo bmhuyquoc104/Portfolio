@@ -4,29 +4,29 @@ import { RiMoonFill } from "react-icons/ri";
 import { RiSunFill } from "react-icons/ri";
 import { MoonIconStyled, SunIconStyled } from "../../style/ConstantStyled";
 import { motion } from "framer-motion";
-function Toggle({ theme, themeToggler,toggleDirection }) {
+function Toggle({ isDark, toggle }) {
 
   return (
-    <ToggleStyled onTap={themeToggler}>
+    <ToggleStyled onTap={toggle}>
       <motion.div
-        onTap={themeToggler}
-        style={{ backgroundColor: theme === "darkTheme" ? "#000000" : "#ffffff" }}
+        onTap={toggle}
+        style={{ backgroundColor: isDark ? "#000000" : "#ffffff" }}
         className="background"
       >
         <motion.div
-          onTap={themeToggler}
+          onTap={toggle}
           animate={{
-            x: toggleDirection,
+            x: isDark ? 0 : 30,
           }}
           transition={{
             type: "spring",
             stiffness: 700,
             damping: 30,
           }}
-          style={{ backgroundColor: theme === "darkTheme" ? "#ff971d" : "#ff971d" }}
+          style={{ backgroundColor: "#ff971d" }}
           className="circle"
         >
-          {theme === "darkTheme" ? (
+          {isDark ? (
             <>
               <RiMoonFill style={MoonIconStyled} />
             </>

@@ -9,7 +9,7 @@ import { AnimatePresence } from "framer-motion";
 import Toggle from "../Toggle/Toggle";
 import { FlexContainer } from "../Containers/Flex/FlexContainer";
 
-function Header({ variants, theme, themeToggler,toggleDirection }) {
+function Header({ variants, isDark, toggle }) {
   const headerRef = useRef(null);
   const changeBackground = () => {
     if (window.scrollY >= 10) {
@@ -28,7 +28,7 @@ function Header({ variants, theme, themeToggler,toggleDirection }) {
     <HeaderStyled ref={headerRef} variants={variants}>
       <FlexContainer justifyContent="flex-start" alignItems="center">
         <Logo />
-        <Toggle toggleDirection = {toggleDirection} theme={theme} themeToggler={themeToggler} />
+        <Toggle isDark={isDark} toggle={toggle} />
       </FlexContainer>
       <Navbar />
       <AiOutlineMenu style={IconStyled} onClick={() => setIsToggle(true)} />

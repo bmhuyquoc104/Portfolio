@@ -1,6 +1,5 @@
 import GlobalStyled from "./style/GlobalStyled";
 import { ThemeProvider } from "styled-components";
-import { lightTheme, darkTheme } from "./style/Theme";
 import useTheme from "./hooks/useTheme";
 import Header from "./components/Header/Header";
 import SectionHome from "./components/SectionHome/SectionHome";
@@ -12,18 +11,12 @@ import SectionContact from "./components/SectionContact/SectionContact";
 import SectionExperience from "./components/SectionExperience/SectionExperience";
 
 function App() {
-  const [theme, toggleDirection, themeToggler] = useTheme();
-
-  const themeMode = theme === "lightTheme" ? lightTheme : darkTheme;
+  const { theme, isDark, toggle } = useTheme();
 
   return (
-    <ThemeProvider theme={themeMode}>
+    <ThemeProvider theme={theme}>
       <GlobalStyled />
-      <Header
-        toggleDirection={toggleDirection}
-        themeToggler={themeToggler}
-        theme={theme}
-      />
+      <Header isDark={isDark} toggle={toggle} />
       <SectionHome />
       <SocialContact />
       <SectionAbout />
