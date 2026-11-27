@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <style>
+    rect { fill: #1e1e2e; }
+    text { fill: #cba6f7; }
+    @media (prefers-color-scheme: light) {
+      rect { fill: #eff1f5; }
+      text { fill: #8839ef; }
+    }
+  </style>
+  <rect width="64" height="64" rx="14"/>
+  <text x="32" y="41" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="30" font-weight="700" text-anchor="middle">HV</text>
+</svg>

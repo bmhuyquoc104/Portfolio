@@ -1,23 +1,19 @@
-import Logo from "./images/logo.svg";
-import Font from "./images/font.json";
-import InvoiceProject from "./images/invoice_project.png";
-import CountryWebsite from "./images/country_website.png";
-import JobWebsiteImage from "./images/job_website.png";
-import ShoppingifyImage from "./images/shoppingify_website.png";
-import SneakerWebsiteImage from "./images/sneaker_website.png";
-import LoopsStudioWebsiteImage from "./images/loop_landing_project.png";
-import InteractiveWebsiteImage from "./images/Interactive_comment_website.png";
-import CrowdFundWebsiteImage from "./images/crowdfund_website.png";
-import SnapWebsiteImage from "./images/snap_website.png";
-import AmbrosiaAppImage from "./images/ambrosia_app.png";
-import DaredevilAppImage from "./images/daredevil_app.png";
-import ChinesePokerAppImage from "./images/chinese_poker_app.png";
-import UniversalAppImage from "./images/universal_app.png";
-import HotelAppImage from "./images/hotel_app.png";
-import Resume from "./VoQuocHuy_resume.pdf";
+import InvoiceProject from "./images/invoice_project.webp";
+import CountryWebsite from "./images/country_website.webp";
+import JobWebsiteImage from "./images/job_website.webp";
+import ShoppingifyImage from "./images/shoppingify_website.webp";
+import SneakerWebsiteImage from "./images/sneaker_website.webp";
+import LoopsStudioWebsiteImage from "./images/loop_landing_project.webp";
+import InteractiveWebsiteImage from "./images/Interactive_comment_website.webp";
+import CrowdFundWebsiteImage from "./images/crowdfund_website.webp";
+import SnapWebsiteImage from "./images/snap_website.webp";
+import AmbrosiaAppImage from "./images/ambrosia_app.webp";
+import DaredevilAppImage from "./images/daredevil_app.webp";
+import ChinesePokerAppImage from "./images/chinese_poker_app.webp";
+import UniversalAppImage from "./images/universal_app.webp";
+import HotelAppImage from "./images/hotel_app.webp";
+import JobScoutImage from "./images/job_scout.webp";
 export const imageResource = {
-  Logo,
-  Font,
   InvoiceProject,
   CountryWebsite,
   JobWebsiteImage,
@@ -32,5 +28,5 @@ export const imageResource = {
   ChinesePokerAppImage,
   HotelAppImage,
   UniversalAppImage,
-  Resume,
+  JobScoutImage,
 };
