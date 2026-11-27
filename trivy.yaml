@@ -1,0 +1,4 @@
+# .env is gitignored and local-only; keep the local scan from flagging it.
+scan:
+  skip-files:
+    - .env
